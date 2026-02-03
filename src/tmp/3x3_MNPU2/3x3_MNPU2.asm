@@ -1,0 +1,73 @@
+; start:
+; IMA
+; 0b1100
+; OUT 0
+; IMA
+; 0b001
+; OUT 0
+; IMA
+; 0b100
+; OUT 0
+; 
+; IN 0
+; 
+; IMA
+; 0b1100
+; OUT 0
+; IMA
+; 0b001
+; OUT 0
+; IMA
+; 0b010
+; OUT 0
+; IMA
+; 0b100
+; OUT 0
+; IMA
+; 0b010
+; OUT 0
+; IMA
+; 0b100
+; OUT 0
+; 
+; IN 0
+; 
+; BRC TRUE
+; start
+
+IMM R1
+0b1100
+IMM R2
+0b001
+IMM R3
+0b100
+IMM R4
+0b010
+
+start:
+AST R1 ; open
+OUT 0
+AST R2
+OUT 0
+AST R4
+OUT 0
+AST R3
+OUT 0
+AST R4
+OUT 0
+AST R3
+OUT 0
+
+IN 0
+
+AST R1 ; close
+OUT 0
+AST R2
+OUT 0
+AST R3
+OUT 0
+
+IN 0
+
+BRC TRUE
+start

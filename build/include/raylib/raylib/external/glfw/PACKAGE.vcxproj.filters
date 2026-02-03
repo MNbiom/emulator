@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\tomek\Desktop\VSC2\c++\emulator\build\CMakeFiles\27d25de0ead89e86158981ca9e9357f0\PACKAGE_force.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{CE8C7BCC-59D2-309D-820B-9DC0FE2A0641}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

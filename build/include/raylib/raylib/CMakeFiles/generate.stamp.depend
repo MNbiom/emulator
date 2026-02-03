@@ -1,0 +1,20 @@
+# CMake generation dependency list for this directory.
+C:/Program Files/CMake/share/cmake-4.0/Modules/CPack.cmake
+C:/Program Files/CMake/share/cmake-4.0/Modules/CPackComponent.cmake
+C:/Program Files/CMake/share/cmake-4.0/Modules/FindOpenGL.cmake
+C:/Program Files/CMake/share/cmake-4.0/Modules/FindPackageHandleStandardArgs.cmake
+C:/Program Files/CMake/share/cmake-4.0/Modules/FindPackageMessage.cmake
+C:/Program Files/CMake/share/cmake-4.0/Modules/GNUInstallDirs.cmake
+C:/Program Files/CMake/share/cmake-4.0/Templates/CPackConfig.cmake.in
+C:/Users/tomek/Desktop/VSC2/c++/emulator/include/raylib/cmake/CompileDefinitions.cmake
+C:/Users/tomek/Desktop/VSC2/c++/emulator/include/raylib/cmake/GlfwImport.cmake
+C:/Users/tomek/Desktop/VSC2/c++/emulator/include/raylib/cmake/InstallConfigurations.cmake
+C:/Users/tomek/Desktop/VSC2/c++/emulator/include/raylib/cmake/JoinPaths.cmake
+C:/Users/tomek/Desktop/VSC2/c++/emulator/include/raylib/cmake/LibraryConfigurations.cmake
+C:/Users/tomek/Desktop/VSC2/c++/emulator/include/raylib/cmake/LibraryPathToLinkerFlags.cmake
+C:/Users/tomek/Desktop/VSC2/c++/emulator/include/raylib/cmake/PackConfigurations.cmake
+C:/Users/tomek/Desktop/VSC2/c++/emulator/include/raylib/cmake/PopulateConfigVariablesLocally.cmake
+C:/Users/tomek/Desktop/VSC2/c++/emulator/include/raylib/cmake/raylib-config-version.cmake
+C:/Users/tomek/Desktop/VSC2/c++/emulator/include/raylib/cmake/raylib-config.cmake
+C:/Users/tomek/Desktop/VSC2/c++/emulator/include/raylib/raylib.pc.in
+C:/Users/tomek/Desktop/VSC2/c++/emulator/include/raylib/src/CMakeLists.txt

@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="17.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <CustomBuild Include="C:\Users\tomek\Desktop\VSC2\c++\emulator\build\CMakeFiles\bf63c32721db0359c02ef6c25cdf5c50\update_mappings.rule">
+      <Filter>CMake Rules</Filter>
+    </CustomBuild>
+    <CustomBuild Include="C:\Users\tomek\Desktop\VSC2\c++\emulator\include\raylib\src\external\glfw\src\CMakeLists.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="C:\Users\tomek\Desktop\VSC2\c++\emulator\include\raylib\src\external\glfw\src\mappings.h.in">
+      <Filter>Header Files</Filter>
+    </None>
+    <None Include="C:\Users\tomek\Desktop\VSC2\c++\emulator\include\raylib\src\external\glfw\CMake\GenerateMappings.cmake" />
+    <None Include="C:\Users\tomek\Desktop\VSC2\c++\emulator\build\include\raylib\raylib\external\glfw\src\CMakeFiles\update_mappings" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="CMake Rules">
+      <UniqueIdentifier>{CE8C7BCC-59D2-309D-820B-9DC0FE2A0641}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{52D2C304-0F07-3193-A1BF-34AE051C985E}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+</Project>

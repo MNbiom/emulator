@@ -1,0 +1,17 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "cmake",
+			"type": "shell",
+			"options": {
+				"cwd": "${fileDirname}/../build"
+			},
+			"command": "cmake --build .",
+			"group": {
+                "kind": "build",
+                "isDefault": true
+            }
+		}
+	]
+}
