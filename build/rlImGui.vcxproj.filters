@@ -22,6 +22,9 @@
     <ClCompile Include="C:\Users\tomek\Desktop\VSC2\c++\emulator\include\ImGuiFileDialog\ImGuiFileDialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\tomek\Desktop\VSC2\c++\emulator\include\ImGuiColorTextEdit\TextEditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <CustomBuild Include="C:\Users\tomek\Desktop\VSC2\c++\emulator\CMakeLists.txt" />

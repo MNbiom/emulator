@@ -17,6 +17,7 @@ set(IMGUI_SOURCES
     ${IMGUI_DIR}/imgui_tables.cpp
     ${IMGUI_DIR}/misc/cpp/imgui_stdlib.cpp
     ${CMAKE_SOURCE_DIR}/include/ImGuiFileDialog/ImGuiFileDialog.cpp
+    ${CMAKE_SOURCE_DIR}/include/ImGuiColorTextEdit/TextEditor.cpp
 
     #${IMGUI_DIR}/imgui_demo.cpp
 )
@@ -31,6 +32,7 @@ target_include_directories(rlImGui PUBLIC
     include/rlImGui
     ${IMGUI_DIR}
     ${CMAKE_SOURCE_DIR}/include/ImGuiFileDialog
+    ${CMAKE_SOURCE_DIR}/include/ImGuiColorTextEdit
 )
 
 target_link_libraries(rlImGui PUBLIC raylib)

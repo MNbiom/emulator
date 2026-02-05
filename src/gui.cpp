@@ -14,13 +14,16 @@ void instert_file_to_editor(std::string path){
     std::ifstream file(path);
     if (!file.is_open()){
         std::cout << "Failed to open file: " << path << "\n";
+        return;
     }
+    std::string editorContent;
     std::string line;
     editorContent.clear();
     while (std::getline(file, line)){
     editorContent += line;
     editorContent.push_back('\n');
     }
+    editor.SetText(editorContent);
 }
 
 void do_file_dialog() { 
@@ -36,10 +39,8 @@ void do_file_dialog() {
     if (ImGuiFileDialog::Instance()->Display("ChooseFileDlgKey")){
         if (ImGuiFileDialog::Instance()->IsOk()) { // action if OK
             std::string filePathName = ImGuiFileDialog::Instance()->GetFilePathName();
-            std::string filePath = ImGuiFileDialog::Instance()->GetCurrentPath();
             // action
             std::cout << filePathName << std::endl;
-            std::cout << filePath << std::endl;
             instert_file_to_editor(filePathName);
         }
         

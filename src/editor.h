@@ -1,6 +1,6 @@
 #pragma once
-#include <string>
+#include "TextEditor.h"
 
-extern std::string editorContent;
+extern TextEditor editor;
 
 void do_editor();
