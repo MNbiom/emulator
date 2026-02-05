@@ -5,12 +5,15 @@
 
 #include "gui.h"
 #include "display.h"
+#include "assembler.h"
+#include "editor.h"
 
+#include "isa.h"
 
 int main(int argc, char const *argv[]){
 
     int windowWidth = 1600;
-	int windowHeight = 900;
+    int windowHeight = 900;
 
 	SetConfigFlags(FLAG_WINDOW_RESIZABLE);
 	InitWindow(windowWidth, windowHeight, "MNemulator");
@@ -42,6 +45,11 @@ int main(int argc, char const *argv[]){
 		rlImGuiBegin(); //imgui
 
 		update_display();
+
+		while (stepInstruction){
+			exec_instr(rom[pc]);
+			stepInstruction = false;
+		}
 
 		gui();
 

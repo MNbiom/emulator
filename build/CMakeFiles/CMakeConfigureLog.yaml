@@ -24,7 +24,7 @@ events:
       The output was:
       0
       Wersja programu MSBuild 17.11.9+a69bbaaf5 dla .NET Framework
-      Kompilacja rozpocz─Ö┼éa si─Ö 03.02.2026 19:50:56.
+      Kompilacja rozpocz─Ö┼éa si─Ö 05.02.2026 23:16:25.
       
       Projekt ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\4.0.0-rc4\\CompilerIdC\\CompilerIdC.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
       PrepareForBuild:
@@ -53,7 +53,7 @@ events:
           Ostrze┼╝enia: 0
           Liczba b┼é─Öd├│w: 0
       
-      Czas, kt├│ry up┼éyn─ů┼é: 00:00:00.52
+      Czas, kt├│ry up┼éyn─ů┼é: 00:00:00.40
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -79,7 +79,7 @@ events:
       The output was:
       0
       Wersja programu MSBuild 17.11.9+a69bbaaf5 dla .NET Framework
-      Kompilacja rozpocz─Ö┼éa si─Ö 03.02.2026 19:50:57.
+      Kompilacja rozpocz─Ö┼éa si─Ö 05.02.2026 23:16:26.
       
       Projekt ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\4.0.0-rc4\\CompilerIdCXX\\CompilerIdCXX.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
       PrepareForBuild:
@@ -108,7 +108,7 @@ events:
           Ostrze┼╝enia: 0
           Liczba b┼é─Öd├│w: 0
       
-      Czas, kt├│ry up┼éyn─ů┼é: 00:00:00.38
+      Czas, kt├│ry up┼éyn─ů┼é: 00:00:00.37
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -127,8 +127,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-9x6k2t"
-      binary: "C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-9x6k2t"
+      source: "C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-0il557"
+      binary: "C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-0il557"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -137,40 +137,40 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-9x6k2t'
+        Change Dir: 'C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-0il557'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_ecc10.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_43b65.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         Wersja programu MSBuild 17.11.9+a69bbaaf5 dla .NET Framework
-        Kompilacja rozpocz─Ö┼éa si─Ö 03.02.2026 19:50:58.
+        Kompilacja rozpocz─Ö┼éa si─Ö 05.02.2026 23:16:27.
         
-        Projekt ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9x6k2t\\cmTC_ecc10.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
+        Projekt ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0il557\\cmTC_43b65.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
         PrepareForBuild:
-          Tworzenie katalogu ÔÇ×cmTC_ecc10.dir\\Debug\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×cmTC_43b65.dir\\Debug\\ÔÇŁ.
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Tworzenie katalogu ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9x6k2t\\Debug\\ÔÇŁ.
-          Tworzenie katalogu ÔÇ×cmTC_ecc10.dir\\Debug\\cmTC_ecc10.tlog\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0il557\\Debug\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×cmTC_43b65.dir\\Debug\\cmTC_43b65.tlog\\ÔÇŁ.
         InitializeBuildStatus:
-          Trwa tworzenie ÔÇ×cmTC_ecc10.dir\\Debug\\cmTC_ecc10.tlog\\unsuccessfulbuildÔÇŁ, poniewa┼╝ okre┼Ťlono "AlwaysCreate".
-          Modyfikowanie ÔÇ×cmTC_ecc10.dir\\Debug\\cmTC_ecc10.tlog\\unsuccessfulbuildÔÇŁ.
+          Trwa tworzenie ÔÇ×cmTC_43b65.dir\\Debug\\cmTC_43b65.tlog\\unsuccessfulbuildÔÇŁ, poniewa┼╝ okre┼Ťlono "AlwaysCreate".
+          Modyfikowanie ÔÇ×cmTC_43b65.dir\\Debug\\cmTC_43b65.tlog\\unsuccessfulbuildÔÇŁ.
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ecc10.dir\\Debug\\\\" /Fd"cmTC_ecc10.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCCompilerABI.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_43b65.dir\\Debug\\\\" /Fd"cmTC_43b65.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCCompilerABI.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34120 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_ecc10.dir\\Debug\\\\" /Fd"cmTC_ecc10.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCCompilerABI.c"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_43b65.dir\\Debug\\\\" /Fd"cmTC_43b65.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCCompilerABI.c"
           CMakeCCompilerABI.c
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9x6k2t\\Debug\\cmTC_ecc10.exe" /INCREMENTAL /ILK:"cmTC_ecc10.dir\\Debug\\cmTC_ecc10.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-9x6k2t/Debug/cmTC_ecc10.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-9x6k2t/Debug/cmTC_ecc10.lib" /MACHINE:X64  /machine:x64 cmTC_ecc10.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_ecc10.vcxproj -> C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9x6k2t\\Debug\\cmTC_ecc10.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0il557\\Debug\\cmTC_43b65.exe" /INCREMENTAL /ILK:"cmTC_43b65.dir\\Debug\\cmTC_43b65.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-0il557/Debug/cmTC_43b65.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-0il557/Debug/cmTC_43b65.lib" /MACHINE:X64  /machine:x64 cmTC_43b65.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_43b65.vcxproj -> C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0il557\\Debug\\cmTC_43b65.exe
         FinalizeBuildStatus:
-          Usuwanie pliku ÔÇ×cmTC_ecc10.dir\\Debug\\cmTC_ecc10.tlog\\unsuccessfulbuildÔÇŁ.
-          Modyfikowanie ÔÇ×cmTC_ecc10.dir\\Debug\\cmTC_ecc10.tlog\\cmTC_ecc10.lastbuildstateÔÇŁ.
-        Kompilowanie projektu ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-9x6k2t\\cmTC_ecc10.vcxprojÔÇŁ wykonane (domy┼Ťlne elementy docelowe).
+          Usuwanie pliku ÔÇ×cmTC_43b65.dir\\Debug\\cmTC_43b65.tlog\\unsuccessfulbuildÔÇŁ.
+          Modyfikowanie ÔÇ×cmTC_43b65.dir\\Debug\\cmTC_43b65.tlog\\cmTC_43b65.lastbuildstateÔÇŁ.
+        Kompilowanie projektu ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0il557\\cmTC_43b65.vcxprojÔÇŁ wykonane (domy┼Ťlne elementy docelowe).
         
         Kompilacja powiod┼éa si─Ö.
             Ostrze┼╝enia: 0
             Liczba b┼é─Öd├│w: 0
         
-        Czas, kt├│ry up┼éyn─ů┼é: 00:00:02.28
+        Czas, kt├│ry up┼éyn─ů┼é: 00:00:00.36
         
       exitCode: 0
   -
@@ -210,8 +210,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-mjq0wx"
-      binary: "C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-mjq0wx"
+      source: "C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-32n1h4"
+      binary: "C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-32n1h4"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -221,40 +221,40 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-mjq0wx'
+        Change Dir: 'C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-32n1h4'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_10e7a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_404f8.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         Wersja programu MSBuild 17.11.9+a69bbaaf5 dla .NET Framework
-        Kompilacja rozpocz─Ö┼éa si─Ö 03.02.2026 19:51:00.
+        Kompilacja rozpocz─Ö┼éa si─Ö 05.02.2026 23:16:28.
         
-        Projekt ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mjq0wx\\cmTC_10e7a.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
+        Projekt ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-32n1h4\\cmTC_404f8.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
         PrepareForBuild:
-          Tworzenie katalogu ÔÇ×cmTC_10e7a.dir\\Debug\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×cmTC_404f8.dir\\Debug\\ÔÇŁ.
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Tworzenie katalogu ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mjq0wx\\Debug\\ÔÇŁ.
-          Tworzenie katalogu ÔÇ×cmTC_10e7a.dir\\Debug\\cmTC_10e7a.tlog\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-32n1h4\\Debug\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×cmTC_404f8.dir\\Debug\\cmTC_404f8.tlog\\ÔÇŁ.
         InitializeBuildStatus:
-          Trwa tworzenie ÔÇ×cmTC_10e7a.dir\\Debug\\cmTC_10e7a.tlog\\unsuccessfulbuildÔÇŁ, poniewa┼╝ okre┼Ťlono "AlwaysCreate".
-          Modyfikowanie ÔÇ×cmTC_10e7a.dir\\Debug\\cmTC_10e7a.tlog\\unsuccessfulbuildÔÇŁ.
+          Trwa tworzenie ÔÇ×cmTC_404f8.dir\\Debug\\cmTC_404f8.tlog\\unsuccessfulbuildÔÇŁ, poniewa┼╝ okre┼Ťlono "AlwaysCreate".
+          Modyfikowanie ÔÇ×cmTC_404f8.dir\\Debug\\cmTC_404f8.tlog\\unsuccessfulbuildÔÇŁ.
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_10e7a.dir\\Debug\\\\" /Fd"cmTC_10e7a.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_404f8.dir\\Debug\\\\" /Fd"cmTC_404f8.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCXXCompilerABI.cpp"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34120 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_10e7a.dir\\Debug\\\\" /Fd"cmTC_10e7a.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /GR /Fo"cmTC_404f8.dir\\Debug\\\\" /Fd"cmTC_404f8.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files\\CMake\\share\\cmake-4.0\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mjq0wx\\Debug\\cmTC_10e7a.exe" /INCREMENTAL /ILK:"cmTC_10e7a.dir\\Debug\\cmTC_10e7a.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-mjq0wx/Debug/cmTC_10e7a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-mjq0wx/Debug/cmTC_10e7a.lib" /MACHINE:X64  /machine:x64 cmTC_10e7a.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_10e7a.vcxproj -> C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mjq0wx\\Debug\\cmTC_10e7a.exe
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-32n1h4\\Debug\\cmTC_404f8.exe" /INCREMENTAL /ILK:"cmTC_404f8.dir\\Debug\\cmTC_404f8.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-32n1h4/Debug/cmTC_404f8.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-32n1h4/Debug/cmTC_404f8.lib" /MACHINE:X64  /machine:x64 cmTC_404f8.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_404f8.vcxproj -> C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-32n1h4\\Debug\\cmTC_404f8.exe
         FinalizeBuildStatus:
-          Usuwanie pliku ÔÇ×cmTC_10e7a.dir\\Debug\\cmTC_10e7a.tlog\\unsuccessfulbuildÔÇŁ.
-          Modyfikowanie ÔÇ×cmTC_10e7a.dir\\Debug\\cmTC_10e7a.tlog\\cmTC_10e7a.lastbuildstateÔÇŁ.
-        Kompilowanie projektu ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mjq0wx\\cmTC_10e7a.vcxprojÔÇŁ wykonane (domy┼Ťlne elementy docelowe).
+          Usuwanie pliku ÔÇ×cmTC_404f8.dir\\Debug\\cmTC_404f8.tlog\\unsuccessfulbuildÔÇŁ.
+          Modyfikowanie ÔÇ×cmTC_404f8.dir\\Debug\\cmTC_404f8.tlog\\cmTC_404f8.lastbuildstateÔÇŁ.
+        Kompilowanie projektu ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-32n1h4\\cmTC_404f8.vcxprojÔÇŁ wykonane (domy┼Ťlne elementy docelowe).
         
         Kompilacja powiod┼éa si─Ö.
             Ostrze┼╝enia: 0
             Liczba b┼é─Öd├│w: 0
         
-        Czas, kt├│ry up┼éyn─ů┼é: 00:00:00.37
+        Czas, kt├│ry up┼éyn─ů┼é: 00:00:00.36
         
       exitCode: 0
   -
@@ -297,8 +297,8 @@ events:
     checks:
       - "Performing Test COMPILER_HAS_THOSE_TOGGLES"
     directories:
-      source: "C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-l5qvev"
-      binary: "C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-l5qvev"
+      source: "C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-nnjpez"
+      binary: "C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-nnjpez"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -308,34 +308,34 @@ events:
       variable: "COMPILER_HAS_THOSE_TOGGLES"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-l5qvev'
+        Change Dir: 'C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-nnjpez'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_b1be7.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_b317a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         Wersja programu MSBuild 17.11.9+a69bbaaf5 dla .NET Framework
-        Kompilacja rozpocz─Ö┼éa si─Ö 03.02.2026 19:51:01.
+        Kompilacja rozpocz─Ö┼éa si─Ö 05.02.2026 23:16:28.
         
-        Projekt ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l5qvev\\cmTC_b1be7.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
+        Projekt ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nnjpez\\cmTC_b317a.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
         PrepareForBuild:
-          Tworzenie katalogu ÔÇ×cmTC_b1be7.dir\\Debug\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×cmTC_b317a.dir\\Debug\\ÔÇŁ.
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Tworzenie katalogu ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l5qvev\\Debug\\ÔÇŁ.
-          Tworzenie katalogu ÔÇ×cmTC_b1be7.dir\\Debug\\cmTC_b1be7.tlog\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nnjpez\\Debug\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×cmTC_b317a.dir\\Debug\\cmTC_b317a.tlog\\ÔÇŁ.
         InitializeBuildStatus:
-          Trwa tworzenie ÔÇ×cmTC_b1be7.dir\\Debug\\cmTC_b1be7.tlog\\unsuccessfulbuildÔÇŁ, poniewa┼╝ okre┼Ťlono "AlwaysCreate".
-          Modyfikowanie ÔÇ×cmTC_b1be7.dir\\Debug\\cmTC_b1be7.tlog\\unsuccessfulbuildÔÇŁ.
+          Trwa tworzenie ÔÇ×cmTC_b317a.dir\\Debug\\cmTC_b317a.tlog\\unsuccessfulbuildÔÇŁ, poniewa┼╝ okre┼Ťlono "AlwaysCreate".
+          Modyfikowanie ÔÇ×cmTC_b317a.dir\\Debug\\cmTC_b317a.tlog\\unsuccessfulbuildÔÇŁ.
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D COMPILER_HAS_THOSE_TOGGLES /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b1be7.dir\\Debug\\\\" /Fd"cmTC_b1be7.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue  -Werror=pointer-arith "C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l5qvev\\src.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D COMPILER_HAS_THOSE_TOGGLES /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b317a.dir\\Debug\\\\" /Fd"cmTC_b317a.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue  -Werror=pointer-arith "C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nnjpez\\src.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34120 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D COMPILER_HAS_THOSE_TOGGLES /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b1be7.dir\\Debug\\\\" /Fd"cmTC_b1be7.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue  -Werror=pointer-arith "C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l5qvev\\src.c"
-        cl : command line  error D8021: invalid numeric argument '/Werror=pointer-arith' [C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l5qvev\\cmTC_b1be7.vcxproj]
-        Kompilowanie projektu ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l5qvev\\cmTC_b1be7.vcxprojÔÇŁ wykonane (domy┼Ťlne elementy docelowe) ÔÇö NIEPOWODZENIE.
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D COMPILER_HAS_THOSE_TOGGLES /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_b317a.dir\\Debug\\\\" /Fd"cmTC_b317a.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue  -Werror=pointer-arith "C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nnjpez\\src.c"
+        cl : command line  error D8021: invalid numeric argument '/Werror=pointer-arith' [C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nnjpez\\cmTC_b317a.vcxproj]
+        Kompilowanie projektu ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nnjpez\\cmTC_b317a.vcxprojÔÇŁ wykonane (domy┼Ťlne elementy docelowe) ÔÇö NIEPOWODZENIE.
         
         Kompilacja NIE POWIOD┼üA SI─ś.
         
-        ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l5qvev\\cmTC_b1be7.vcxprojÔÇŁ (domy┼Ťlny element docelowy) (1)->
+        ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nnjpez\\cmTC_b317a.vcxprojÔÇŁ (domy┼Ťlny element docelowy) (1)->
         (element docelowy ClCompile) -> 
-          cl : command line  error D8021: invalid numeric argument '/Werror=pointer-arith' [C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-l5qvev\\cmTC_b1be7.vcxproj]
+          cl : command line  error D8021: invalid numeric argument '/Werror=pointer-arith' [C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-nnjpez\\cmTC_b317a.vcxproj]
         
             Ostrze┼╝enia: 0
             Liczba b┼é─Öd├│w: 1
@@ -354,8 +354,8 @@ events:
     checks:
       - "Performing Test CMAKE_HAVE_LIBC_PTHREAD"
     directories:
-      source: "C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-pptaem"
-      binary: "C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-pptaem"
+      source: "C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-ngd4qr"
+      binary: "C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-ngd4qr"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -365,40 +365,40 @@ events:
       variable: "CMAKE_HAVE_LIBC_PTHREAD"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-pptaem'
+        Change Dir: 'C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-ngd4qr'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_0f5b7.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_f151c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         Wersja programu MSBuild 17.11.9+a69bbaaf5 dla .NET Framework
-        Kompilacja rozpocz─Ö┼éa si─Ö 03.02.2026 19:51:01.
+        Kompilacja rozpocz─Ö┼éa si─Ö 05.02.2026 23:16:29.
         
-        Projekt ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pptaem\\cmTC_0f5b7.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
+        Projekt ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ngd4qr\\cmTC_f151c.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
         PrepareForBuild:
-          Tworzenie katalogu ÔÇ×cmTC_0f5b7.dir\\Debug\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×cmTC_f151c.dir\\Debug\\ÔÇŁ.
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Tworzenie katalogu ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pptaem\\Debug\\ÔÇŁ.
-          Tworzenie katalogu ÔÇ×cmTC_0f5b7.dir\\Debug\\cmTC_0f5b7.tlog\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ngd4qr\\Debug\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×cmTC_f151c.dir\\Debug\\cmTC_f151c.tlog\\ÔÇŁ.
         InitializeBuildStatus:
-          Trwa tworzenie ÔÇ×cmTC_0f5b7.dir\\Debug\\cmTC_0f5b7.tlog\\unsuccessfulbuildÔÇŁ, poniewa┼╝ okre┼Ťlono "AlwaysCreate".
-          Modyfikowanie ÔÇ×cmTC_0f5b7.dir\\Debug\\cmTC_0f5b7.tlog\\unsuccessfulbuildÔÇŁ.
+          Trwa tworzenie ÔÇ×cmTC_f151c.dir\\Debug\\cmTC_f151c.tlog\\unsuccessfulbuildÔÇŁ, poniewa┼╝ okre┼Ťlono "AlwaysCreate".
+          Modyfikowanie ÔÇ×cmTC_f151c.dir\\Debug\\cmTC_f151c.tlog\\unsuccessfulbuildÔÇŁ.
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0f5b7.dir\\Debug\\\\" /Fd"cmTC_0f5b7.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pptaem\\src.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f151c.dir\\Debug\\\\" /Fd"cmTC_f151c.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ngd4qr\\src.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34120 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_0f5b7.dir\\Debug\\\\" /Fd"cmTC_0f5b7.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pptaem\\src.c"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CMAKE_HAVE_LIBC_PTHREAD /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_f151c.dir\\Debug\\\\" /Fd"cmTC_f151c.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ngd4qr\\src.c"
           src.c
-        C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pptaem\\src.c(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pptaem\\cmTC_0f5b7.vcxproj]
-        Kompilowanie projektu ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pptaem\\cmTC_0f5b7.vcxprojÔÇŁ wykonane (domy┼Ťlne elementy docelowe) ÔÇö NIEPOWODZENIE.
+        C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ngd4qr\\src.c(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ngd4qr\\cmTC_f151c.vcxproj]
+        Kompilowanie projektu ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ngd4qr\\cmTC_f151c.vcxprojÔÇŁ wykonane (domy┼Ťlne elementy docelowe) ÔÇö NIEPOWODZENIE.
         
         Kompilacja NIE POWIOD┼üA SI─ś.
         
-        ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pptaem\\cmTC_0f5b7.vcxprojÔÇŁ (domy┼Ťlny element docelowy) (1)->
+        ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ngd4qr\\cmTC_f151c.vcxprojÔÇŁ (domy┼Ťlny element docelowy) (1)->
         (element docelowy ClCompile) -> 
-          C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pptaem\\src.c(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-pptaem\\cmTC_0f5b7.vcxproj]
+          C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ngd4qr\\src.c(1,10): error C1083: Cannot open include file: 'pthread.h': No such file or directory [C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ngd4qr\\cmTC_f151c.vcxproj]
         
             Ostrze┼╝enia: 0
             Liczba b┼é─Öd├│w: 1
         
-        Czas, kt├│ry up┼éyn─ů┼é: 00:00:00.21
+        Czas, kt├│ry up┼éyn─ů┼é: 00:00:00.22
         
       exitCode: 1
   -
@@ -411,8 +411,8 @@ events:
     checks:
       - "Looking for pthread_create in pthreads"
     directories:
-      source: "C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-7ja3u4"
-      binary: "C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-7ja3u4"
+      source: "C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-xhf6wc"
+      binary: "C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-xhf6wc"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -422,42 +422,42 @@ events:
       variable: "CMAKE_HAVE_PTHREADS_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-7ja3u4'
+        Change Dir: 'C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-xhf6wc'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_1146c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_6c89c.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         Wersja programu MSBuild 17.11.9+a69bbaaf5 dla .NET Framework
-        Kompilacja rozpocz─Ö┼éa si─Ö 03.02.2026 19:51:02.
+        Kompilacja rozpocz─Ö┼éa si─Ö 05.02.2026 23:16:29.
         
-        Projekt ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7ja3u4\\cmTC_1146c.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
+        Projekt ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xhf6wc\\cmTC_6c89c.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
         PrepareForBuild:
-          Tworzenie katalogu ÔÇ×cmTC_1146c.dir\\Debug\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×cmTC_6c89c.dir\\Debug\\ÔÇŁ.
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Tworzenie katalogu ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7ja3u4\\Debug\\ÔÇŁ.
-          Tworzenie katalogu ÔÇ×cmTC_1146c.dir\\Debug\\cmTC_1146c.tlog\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xhf6wc\\Debug\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×cmTC_6c89c.dir\\Debug\\cmTC_6c89c.tlog\\ÔÇŁ.
         InitializeBuildStatus:
-          Trwa tworzenie ÔÇ×cmTC_1146c.dir\\Debug\\cmTC_1146c.tlog\\unsuccessfulbuildÔÇŁ, poniewa┼╝ okre┼Ťlono "AlwaysCreate".
-          Modyfikowanie ÔÇ×cmTC_1146c.dir\\Debug\\cmTC_1146c.tlog\\unsuccessfulbuildÔÇŁ.
+          Trwa tworzenie ÔÇ×cmTC_6c89c.dir\\Debug\\cmTC_6c89c.tlog\\unsuccessfulbuildÔÇŁ, poniewa┼╝ okre┼Ťlono "AlwaysCreate".
+          Modyfikowanie ÔÇ×cmTC_6c89c.dir\\Debug\\cmTC_6c89c.tlog\\unsuccessfulbuildÔÇŁ.
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1146c.dir\\Debug\\\\" /Fd"cmTC_1146c.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7ja3u4\\CheckFunctionExists.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_6c89c.dir\\Debug\\\\" /Fd"cmTC_6c89c.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xhf6wc\\CheckFunctionExists.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34120 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_1146c.dir\\Debug\\\\" /Fd"cmTC_1146c.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7ja3u4\\CheckFunctionExists.c"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_6c89c.dir\\Debug\\\\" /Fd"cmTC_6c89c.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xhf6wc\\CheckFunctionExists.c"
           CheckFunctionExists.c
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7ja3u4\\Debug\\cmTC_1146c.exe" /INCREMENTAL /ILK:"cmTC_1146c.dir\\Debug\\cmTC_1146c.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-7ja3u4/Debug/cmTC_1146c.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-7ja3u4/Debug/cmTC_1146c.lib" /MACHINE:X64  /machine:x64 cmTC_1146c.dir\\Debug\\CheckFunctionExists.obj
-        LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7ja3u4\\cmTC_1146c.vcxproj]
-        Kompilowanie projektu ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7ja3u4\\cmTC_1146c.vcxprojÔÇŁ wykonane (domy┼Ťlne elementy docelowe) ÔÇö NIEPOWODZENIE.
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xhf6wc\\Debug\\cmTC_6c89c.exe" /INCREMENTAL /ILK:"cmTC_6c89c.dir\\Debug\\cmTC_6c89c.ilk" /NOLOGO pthreads.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-xhf6wc/Debug/cmTC_6c89c.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-xhf6wc/Debug/cmTC_6c89c.lib" /MACHINE:X64  /machine:x64 cmTC_6c89c.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xhf6wc\\cmTC_6c89c.vcxproj]
+        Kompilowanie projektu ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xhf6wc\\cmTC_6c89c.vcxprojÔÇŁ wykonane (domy┼Ťlne elementy docelowe) ÔÇö NIEPOWODZENIE.
         
         Kompilacja NIE POWIOD┼üA SI─ś.
         
-        ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7ja3u4\\cmTC_1146c.vcxprojÔÇŁ (domy┼Ťlny element docelowy) (1)->
+        ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xhf6wc\\cmTC_6c89c.vcxprojÔÇŁ (domy┼Ťlny element docelowy) (1)->
         (element docelowy Link) -> 
-          LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-7ja3u4\\cmTC_1146c.vcxproj]
+          LINK : fatal error LNK1104: cannot open file 'pthreads.lib' [C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xhf6wc\\cmTC_6c89c.vcxproj]
         
             Ostrze┼╝enia: 0
             Liczba b┼é─Öd├│w: 1
         
-        Czas, kt├│ry up┼éyn─ů┼é: 00:00:00.29
+        Czas, kt├│ry up┼éyn─ů┼é: 00:00:00.28
         
       exitCode: 1
   -
@@ -470,8 +470,8 @@ events:
     checks:
       - "Looking for pthread_create in pthread"
     directories:
-      source: "C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-xdfbg3"
-      binary: "C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-xdfbg3"
+      source: "C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-3olpnw"
+      binary: "C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-3olpnw"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -481,42 +481,42 @@ events:
       variable: "CMAKE_HAVE_PTHREAD_CREATE"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-xdfbg3'
+        Change Dir: 'C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-3olpnw'
         
-        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_2fc87.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
+        Run Build Command(s): "C:/Program Files/Microsoft Visual Studio/2022/Community/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_3c78b.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=17.0 /v:n
         Wersja programu MSBuild 17.11.9+a69bbaaf5 dla .NET Framework
-        Kompilacja rozpocz─Ö┼éa si─Ö 03.02.2026 19:51:02.
+        Kompilacja rozpocz─Ö┼éa si─Ö 05.02.2026 23:16:30.
         
-        Projekt ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xdfbg3\\cmTC_2fc87.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
+        Projekt ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3olpnw\\cmTC_3c78b.vcxprojÔÇŁ w w─Ö┼║le 1 (domy┼Ťlne elementy docelowe).
         PrepareForBuild:
-          Tworzenie katalogu ÔÇ×cmTC_2fc87.dir\\Debug\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×cmTC_3c78b.dir\\Debug\\ÔÇŁ.
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Tworzenie katalogu ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xdfbg3\\Debug\\ÔÇŁ.
-          Tworzenie katalogu ÔÇ×cmTC_2fc87.dir\\Debug\\cmTC_2fc87.tlog\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3olpnw\\Debug\\ÔÇŁ.
+          Tworzenie katalogu ÔÇ×cmTC_3c78b.dir\\Debug\\cmTC_3c78b.tlog\\ÔÇŁ.
         InitializeBuildStatus:
-          Trwa tworzenie ÔÇ×cmTC_2fc87.dir\\Debug\\cmTC_2fc87.tlog\\unsuccessfulbuildÔÇŁ, poniewa┼╝ okre┼Ťlono "AlwaysCreate".
-          Modyfikowanie ÔÇ×cmTC_2fc87.dir\\Debug\\cmTC_2fc87.tlog\\unsuccessfulbuildÔÇŁ.
+          Trwa tworzenie ÔÇ×cmTC_3c78b.dir\\Debug\\cmTC_3c78b.tlog\\unsuccessfulbuildÔÇŁ, poniewa┼╝ okre┼Ťlono "AlwaysCreate".
+          Modyfikowanie ÔÇ×cmTC_3c78b.dir\\Debug\\cmTC_3c78b.tlog\\unsuccessfulbuildÔÇŁ.
         ClCompile:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2fc87.dir\\Debug\\\\" /Fd"cmTC_2fc87.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xdfbg3\\CheckFunctionExists.c"
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_3c78b.dir\\Debug\\\\" /Fd"cmTC_3c78b.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3olpnw\\CheckFunctionExists.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.41.34120 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_2fc87.dir\\Debug\\\\" /Fd"cmTC_2fc87.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xdfbg3\\CheckFunctionExists.c"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D CHECK_FUNCTION_EXISTS=pthread_create /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Zc:inline /Fo"cmTC_3c78b.dir\\Debug\\\\" /Fd"cmTC_3c78b.dir\\Debug\\vc143.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3olpnw\\CheckFunctionExists.c"
           CheckFunctionExists.c
         Link:
-          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xdfbg3\\Debug\\cmTC_2fc87.exe" /INCREMENTAL /ILK:"cmTC_2fc87.dir\\Debug\\cmTC_2fc87.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-xdfbg3/Debug/cmTC_2fc87.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-xdfbg3/Debug/cmTC_2fc87.lib" /MACHINE:X64  /machine:x64 cmTC_2fc87.dir\\Debug\\CheckFunctionExists.obj
-        LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xdfbg3\\cmTC_2fc87.vcxproj]
-        Kompilowanie projektu ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xdfbg3\\cmTC_2fc87.vcxprojÔÇŁ wykonane (domy┼Ťlne elementy docelowe) ÔÇö NIEPOWODZENIE.
+          C:\\Program Files\\Microsoft Visual Studio\\2022\\Community\\VC\\Tools\\MSVC\\14.41.34120\\bin\\HostX64\\x64\\link.exe /ERRORREPORT:QUEUE /OUT:"C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3olpnw\\Debug\\cmTC_3c78b.exe" /INCREMENTAL /ILK:"cmTC_3c78b.dir\\Debug\\cmTC_3c78b.ilk" /NOLOGO pthread.lib kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-3olpnw/Debug/cmTC_3c78b.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:/Users/tomek/Desktop/VSC2/c++/emulator/build/CMakeFiles/CMakeScratch/TryCompile-3olpnw/Debug/cmTC_3c78b.lib" /MACHINE:X64  /machine:x64 cmTC_3c78b.dir\\Debug\\CheckFunctionExists.obj
+        LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3olpnw\\cmTC_3c78b.vcxproj]
+        Kompilowanie projektu ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3olpnw\\cmTC_3c78b.vcxprojÔÇŁ wykonane (domy┼Ťlne elementy docelowe) ÔÇö NIEPOWODZENIE.
         
         Kompilacja NIE POWIOD┼üA SI─ś.
         
-        ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xdfbg3\\cmTC_2fc87.vcxprojÔÇŁ (domy┼Ťlny element docelowy) (1)->
+        ÔÇ×C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3olpnw\\cmTC_3c78b.vcxprojÔÇŁ (domy┼Ťlny element docelowy) (1)->
         (element docelowy Link) -> 
-          LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-xdfbg3\\cmTC_2fc87.vcxproj]
+          LINK : fatal error LNK1104: cannot open file 'pthread.lib' [C:\\Users\\tomek\\Desktop\\VSC2\\c++\\emulator\\build\\CMakeFiles\\CMakeScratch\\TryCompile-3olpnw\\cmTC_3c78b.vcxproj]
         
             Ostrze┼╝enia: 0
             Liczba b┼é─Öd├│w: 1
         
-        Czas, kt├│ry up┼éyn─ů┼é: 00:00:00.29
+        Czas, kt├│ry up┼éyn─ů┼é: 00:00:00.28
         
       exitCode: 1
 ...

@@ -8,6 +8,11 @@
 
 TextEditor editor;
 
+bool isPaused = true;
+int rtps = 10;
+bool rtpsLimit = true;
+bool stepInstruction = false;
+
 TextEditor::LanguageDefinition DeafultAssemblerLang() {
     TextEditor::LanguageDefinition langDef;
     langDef.mCaseSensitive = true;
@@ -54,8 +59,28 @@ void do_editor(){
     ImGui::SetNextWindowSize(ImVec2(500, 900-20-1), ImGuiCond_FirstUseEver);
     ImGui::SetNextWindowPos(ImVec2(1600-500-1, 20), ImGuiCond_FirstUseEver);
 
+    //compile button
     ImGui::Begin("Code editor");
-    if (ImGui::Button("Run")) init_rom();
+    ImGui::Indent(ImGui::GetStyle().FramePadding.y);
+    if (ImGui::Button("Compile")) init_rom();
+    ImGui::Unindent(ImGui::GetStyle().FramePadding.y);
+    //play/pause
+    ImGui::SameLine(0, 25);
+    if (ImGui::Button(isPaused ? "▶" : "⏸", ImVec2(ImGui::GetItemRectSize().y,0))) isPaused = !isPaused;
+    //step
+    ImGui::SameLine();
+    if (ImGui::Button("Step")) stepInstruction = true;
+    ImGui::SetItemTooltip("F10");
+    //rtps
+    ImGui::SameLine();
+    ImGui::PushItemWidth(100);
+    ImGui::DragInt("##", &rtps, 1, 1, INT_MAX, nullptr, ImGuiSliderFlags_ClampOnInput);
+    ImGui::SetItemTooltip("rtps");
+    ImGui::PopItemWidth();
+    //unlimited rtps
+    ImGui::SameLine();
+    ImGui::Checkbox("rtps limit", &rtpsLimit);
+
 
     ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[1]);
     editor.Render("CodeEditor");

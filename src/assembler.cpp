@@ -14,6 +14,8 @@
 uint32_t rom[1<<ROM_ADDRESS_SIZE];
 
 void init_rom(){
+    reset_cpu();
+    isPaused = true;
     std::string editorContent = editor.GetText();
 
     std::fill(std::begin(rom), std::end(rom), 0);

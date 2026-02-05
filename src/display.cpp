@@ -61,7 +61,7 @@ void do_display(){
         resetDisplayPos = false;
     }
     
-    ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(0.25f, 0.25f, 0.25f, 1.0f));
+    ImGui::PushStyleColor(ImGuiCol_WindowBg, ImVec4(0.12f, 0.12f, 0.12f, 1.0f));
     ImGui::Begin(
         "Display",
         &showDisplayWindow,
@@ -70,7 +70,9 @@ void do_display(){
     );
     
     ImGui::AlignTextToFramePadding();
+    ImGui::Indent(ImGui::GetStyle().FramePadding.y);
     ImGui::Text("Change screen size:");
+    ImGui::Unindent(ImGui::GetStyle().FramePadding.y);
     ImGui::SameLine();
     float spacing = ImGui::GetStyle().ItemInnerSpacing.x;
     ImGui::PushItemFlag(ImGuiItemFlags_ButtonRepeat, true);

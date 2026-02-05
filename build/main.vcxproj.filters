@@ -13,6 +13,9 @@
     <ClCompile Include="C:\Users\tomek\Desktop\VSC2\c++\emulator\src\gui.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\tomek\Desktop\VSC2\c++\emulator\src\isa.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\tomek\Desktop\VSC2\c++\emulator\src\main.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
