@@ -13,6 +13,11 @@ bool resetIpsPos = true;
 
 bool showRegsWindow = true;
 bool resetRegsPos = true;
+bool resetRegsSize = true;
+
+bool showFlagsWindow = true;
+bool resetFlagsPos = true;
+bool resetFlagsSize = true;
 
 void get_change(){
     bool change = false;
@@ -35,7 +40,7 @@ void get_change(){
 
 void do_ips(){
     if (resetIpsPos){
-        ImGui::SetNextWindowPos(ImVec2(1 + (2*DISPLAY_MAX_SIZE)+2*ImGui::GetStyle().WindowBorderSize + 1,20));
+        ImGui::SetNextWindowPos(ImVec2(1, 870));
         resetIpsPos = false;
     }
 
@@ -51,8 +56,12 @@ void do_ips(){
 
 void do_regs(){
     if (resetRegsPos){
-        //ImGui::SetNextWindowPos(ImVec2(1 + (2*DISPLAY_MAX_SIZE)+2*ImGui::GetStyle().WindowBorderSize + 1,20));
+        ImGui::SetNextWindowPos(ImVec2(1 + (2*DISPLAY_MAX_SIZE)+2*ImGui::GetStyle().WindowBorderSize + 1,20));
         resetRegsPos = false;
+    }
+    if (resetRegsSize){
+        ImGui::SetNextWindowSize(ImVec2(0, 0));
+        resetRegsSize = false;
     }
     ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(1, 0));
     ImGui::Begin("Registers", &showRegsWindow);
@@ -76,6 +85,78 @@ void do_regs(){
             ImGui::TableSetColumnIndex(1);
             ImGui::Text("%i", reg[i]);
         }
+        ImGui::EndTable();
+    }
+
+    ImGui::End();
+    ImGui::PopStyleVar();
+}
+
+void do_flags(){
+    if (resetFlagsPos){
+        ImGui::SetNextWindowPos(ImVec2(1 + (2*DISPLAY_MAX_SIZE)+2*ImGui::GetStyle().WindowBorderSize + 1 + 92,20));
+        resetFlagsPos = false;
+    }
+    if (resetFlagsSize){
+        ImGui::SetNextWindowSize(ImVec2(0, 0));
+        resetFlagsSize = false;
+    }
+    ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(1, 0));
+    ImGui::Begin("Flags", &showFlagsWindow);
+
+    if (ImGui::BeginTable("Flags table", 2, ImGuiTableFlags_Borders)){
+        ImGui::TableSetupColumn("Flag");
+        ImGui::TableSetupColumn("Value");
+        ImGui::TableHeadersRow();
+
+        ImGui::TableNextRow();
+        ImGui::TableSetColumnIndex(0);
+        ImGui::Text("TRUE");
+        ImGui::TableSetColumnIndex(1);
+        ImGui::Text("%i", flag[0]);
+
+        ImGui::TableNextRow();
+        ImGui::TableSetColumnIndex(0);
+        ImGui::Text("NEQ, NZERO");
+        ImGui::TableSetColumnIndex(1);
+        ImGui::Text("%i", flag[1]);
+
+        ImGui::TableNextRow();
+        ImGui::TableSetColumnIndex(0);
+        ImGui::Text("EQ, ZERO");
+        ImGui::TableSetColumnIndex(1);
+        ImGui::Text("%i", flag[2]);
+        
+        ImGui::TableNextRow();
+        ImGui::TableSetColumnIndex(0);
+        ImGui::Text("LT, NCARRY");
+        ImGui::TableSetColumnIndex(1);
+        ImGui::Text("%i", flag[3]);
+
+        ImGui::TableNextRow();
+        ImGui::TableSetColumnIndex(0);
+        ImGui::Text("LEQ");
+        ImGui::TableSetColumnIndex(1);
+        ImGui::Text("%i", flag[4]);
+
+        ImGui::TableNextRow();
+        ImGui::TableSetColumnIndex(0);
+        ImGui::Text("GT");
+        ImGui::TableSetColumnIndex(1);
+        ImGui::Text("%i", flag[5]);
+
+        ImGui::TableNextRow();
+        ImGui::TableSetColumnIndex(0);
+        ImGui::Text("GEQ, CARRY");
+        ImGui::TableSetColumnIndex(1);
+        ImGui::Text("%i", flag[6]);
+
+        ImGui::TableNextRow();
+        ImGui::TableSetColumnIndex(0);
+        ImGui::Text("MSB/LSB");
+        ImGui::TableSetColumnIndex(1);
+        ImGui::Text("%i", flag[7]);
+
         ImGui::EndTable();
     }
 

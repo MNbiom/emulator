@@ -67,29 +67,57 @@ void do_menu(){
                     showIpsWindow = showAllState;
                     showDisplayWindow = showAllState;
                     showEditorWindow = showAllState;
+                    showRegsWindow = showAllState;
+                    showFlagsWindow = showAllState;
                 }
                 ImGui::MenuItem("IPS counter", nullptr, &showIpsWindow);
                 ImGui::MenuItem("Display", nullptr, &showDisplayWindow);
+                ImGui::MenuItem("Editor", nullptr, &showEditorWindow);
+                ImGui::MenuItem("Registers", nullptr, &showRegsWindow);
+                ImGui::MenuItem("Flags", nullptr, &showFlagsWindow);
                 ImGui::EndMenu();
             }
             if (ImGui::BeginMenu("Reset position...")){
                 if (ImGui::MenuItem("All")){
+                    resetIpsPos = true;
                     resetDisplayPos = true;
+                    resetEditorPos = true;
+                    resetRegsPos = true;
+                    resetFlagsPos = true;
                 }
+                if (ImGui::MenuItem("IPS")) resetIpsPos = true;
                 if (ImGui::MenuItem("Display")) resetDisplayPos = true;
-                    if (ImGui::MenuItem("IPS")) resetIpsPos = true;
+                if (ImGui::MenuItem("Editor")) resetEditorPos = true;
+                if (ImGui::MenuItem("Registers")) resetRegsPos = true;
+                if (ImGui::MenuItem("Flags")) resetFlagsPos = true;
                 ImGui::EndMenu();
             }
             if (ImGui::BeginMenu("Reset size...")){
                 if (ImGui::MenuItem("All")){
                     resetDisplaySize = true;
+                    resetEditorSize = true;
+                    resetRegsPos = true;
+                    resetFlagsSize = true;
                 }
                 if (ImGui::MenuItem("Display")) resetDisplaySize = true;
+                if (ImGui::MenuItem("Editor")) resetEditorSize = true;
+                if (ImGui::MenuItem("Registers")) resetRegsSize = true;
+                if (ImGui::MenuItem("Flags")) resetFlagsSize = true;
                 ImGui::EndMenu();
             }
             if (ImGui::MenuItem("Reset everything")){
+                    resetIpsPos = true;
+
                     resetDisplayPos = true;
                     resetDisplaySize = true;
+
+                    resetEditorPos = true;
+                    resetEditorSize = true;
+
+                    resetRegsPos = true;
+                    resetRegsSize = true;
+                    resetFlagsPos = true;
+                    resetFlagsSize = true;
             }
 
             ImGui::EndMenu();
@@ -104,5 +132,6 @@ void gui(){
     if (showDisplayWindow) do_display();
     if (showEditorWindow) do_editor();
     if (showIpsWindow) do_ips();
-    do_regs();
+    if (showRegsWindow) do_regs();
+    if (showFlagsWindow) do_flags();
 }

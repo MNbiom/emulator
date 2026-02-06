@@ -10,7 +10,7 @@ constexpr uint8_t BIT_WIDTH = 8;
 constexpr uint32_t BIT_LIMIT = (1 << BIT_WIDTH) - 1;
 //constexpr uint8_t REG_AMOUNT = 8;
 constexpr uint8_t IO_AMOUNT = 8;
-constexpr uint8_t FLAG_AMOUNT = 8;
+//constexpr uint8_t FLAG_AMOUNT = 8;
 
 //constexpr uint8_t ROM_ADDRESS_SIZE = 14;
 constexpr uint8_t OPCODE_BIT_SIZE = 5;
@@ -79,6 +79,7 @@ uint32_t out[IO_AMOUNT] = {0};
 
 void reset_cpu(){
     pc = 0;
+    acc = 0;
     std::fill(std::begin(reg), std::end(reg), 0);
     std::fill(std::begin(flag), std::end(flag), 0);
     std::fill(std::begin(out), std::end(out), 0);

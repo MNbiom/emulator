@@ -9,6 +9,7 @@ void reset_cpu();
 
 constexpr uint8_t ROM_ADDRESS_SIZE = 14;
 constexpr uint8_t REG_AMOUNT = 8;
+constexpr uint8_t FLAG_AMOUNT = 8;
 constexpr double CLOCK_SPEED = 8;
 
 extern const std::unordered_map<std::string, uint32_t> codes;

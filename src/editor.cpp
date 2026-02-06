@@ -9,12 +9,15 @@
 TextEditor editor;
 
 bool showEditorWindow = true;
+bool resetEditorPos = true;
+bool resetEditorSize = true;
 
 bool isPaused = true;
 int rtps = 10;
 bool rtpsLimit = true;
 bool stepInstruction = false;
 bool highlightCurrentLine = true;
+bool followHighlights = false;
 
 TextEditor::LanguageDefinition DeafultAssemblerLang() {
     TextEditor::LanguageDefinition langDef;
@@ -43,6 +46,7 @@ TextEditor::LanguageDefinition DeafultAssemblerLang() {
 }
 
 void highlight_line(){
+    if (followHighlights) editor.SetCursorPosition(TextEditor::Coordinates{getLine[pc], 0});
     editor.SetSelection(
         TextEditor::Coordinates{getLine[pc], 0},
         TextEditor::Coordinates{getLine[pc], INT_MAX}
@@ -67,8 +71,14 @@ void do_editor(){
     }
 
     ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(1, ImGui::GetStyle().FramePadding.y));
-    ImGui::SetNextWindowSize(ImVec2(500, 900-20-1), ImGuiCond_FirstUseEver);
-    ImGui::SetNextWindowPos(ImVec2(1600-500-1, 20), ImGuiCond_FirstUseEver);
+    if (resetEditorSize){
+        ImGui::SetNextWindowSize(ImVec2(500, 900-20-1));
+        resetEditorSize = false;
+    }
+    if (resetEditorPos){
+        ImGui::SetNextWindowPos(ImVec2(1600-500-1, 20));
+        resetEditorPos = false;
+    }
 
     //compile button
     ImGui::Begin("Code editor", &showEditorWindow);
@@ -82,20 +92,25 @@ void do_editor(){
     ImGui::SameLine();
     if (ImGui::Button("Step")) stepInstruction = true;
     ImGui::SetItemTooltip("F10");
+    if (ImGui::IsKeyPressed(ImGuiKey_F10)) stepInstruction = true;
     //rtps
     ImGui::SameLine();
     ImGui::PushItemWidth(75);
-    ImGui::DragInt("##", &rtps, 1, 1, INT_MAX, nullptr, ImGuiSliderFlags_ClampOnInput);
+    ImGui::DragInt("##rtps", &rtps, 1, 1, INT_MAX, nullptr, ImGuiSliderFlags_ClampOnInput);
     ImGui::SetItemTooltip("rtps");
     ImGui::PopItemWidth();
     //unlimited rtps
     ImGui::SameLine();
     ImGui::Checkbox("rtps limit", &rtpsLimit);
     ImGui::SameLine();
-    ImGui::Checkbox("follow code", &highlightCurrentLine);
+    ImGui::Checkbox("##Highlight current line(toggle)", &highlightCurrentLine);
+    ImGui::SetItemTooltip("Highlight current line(toggle)");
     ImGui::SameLine();
-    if (ImGui::Button(" ", ImVec2(ImGui::GetItemRectSize().y,0))) highlight_line();
-    ImGui::SetItemTooltip("highlight current line");
+    ImGui::Checkbox("##Follow highlighted line", &followHighlights);
+    ImGui::SetItemTooltip("Follow highlighted line");
+    ImGui::SameLine();
+    if (ImGui::Button("##Highlight current line", ImVec2(ImGui::GetItemRectSize().y,0))) highlight_line();
+    ImGui::SetItemTooltip("Highlight current line");
 
     ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[1]);
     editor.Render("CodeEditor");
