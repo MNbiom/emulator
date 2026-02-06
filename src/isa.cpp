@@ -8,7 +8,7 @@
 
 constexpr uint8_t BIT_WIDTH = 8;
 constexpr uint32_t BIT_LIMIT = (1 << BIT_WIDTH) - 1;
-constexpr uint8_t REG_AMOUNT = 8;
+//constexpr uint8_t REG_AMOUNT = 8;
 constexpr uint8_t IO_AMOUNT = 8;
 constexpr uint8_t FLAG_AMOUNT = 8;
 

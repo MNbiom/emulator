@@ -1,9 +1,11 @@
+#include "gui.h"
+
 #include "imgui.h"
 #include "ImGuiFileDialog.h"
 
-#include "gui.h"
 #include "display.h"
 #include "editor.h"
+#include "monitors.h"
 
 #include <iostream>
 #include <fstream>
@@ -60,7 +62,13 @@ void do_menu(){
 
         if (ImGui::BeginMenu("View")){
             if (ImGui::BeginMenu("Visibility")){
-                ImGui::MenuItem("All", nullptr, &showDisplayWindow);
+                bool showAllState = (showIpsWindow && showDisplayWindow && showEditorWindow);
+                if (ImGui::MenuItem("All", nullptr, &showAllState)){
+                    showIpsWindow = showAllState;
+                    showDisplayWindow = showAllState;
+                    showEditorWindow = showAllState;
+                }
+                ImGui::MenuItem("IPS counter", nullptr, &showIpsWindow);
                 ImGui::MenuItem("Display", nullptr, &showDisplayWindow);
                 ImGui::EndMenu();
             }
@@ -68,18 +76,15 @@ void do_menu(){
                 if (ImGui::MenuItem("All")){
                     resetDisplayPos = true;
                 }
-                if (ImGui::MenuItem("Display")){
-                    resetDisplayPos = true;
-                }
+                if (ImGui::MenuItem("Display")) resetDisplayPos = true;
+                    if (ImGui::MenuItem("IPS")) resetIpsPos = true;
                 ImGui::EndMenu();
             }
             if (ImGui::BeginMenu("Reset size...")){
                 if (ImGui::MenuItem("All")){
                     resetDisplaySize = true;
                 }
-                if (ImGui::MenuItem("Display")){
-                    resetDisplaySize = true;
-                }
+                if (ImGui::MenuItem("Display")) resetDisplaySize = true;
                 ImGui::EndMenu();
             }
             if (ImGui::MenuItem("Reset everything")){
@@ -96,7 +101,8 @@ void do_menu(){
 void gui(){
     do_menu();
     do_file_dialog();
-    if (showDisplayWindow)
-        do_display();
-        do_editor();
+    if (showDisplayWindow) do_display();
+    if (showEditorWindow) do_editor();
+    if (showIpsWindow) do_ips();
+    do_regs();
 }

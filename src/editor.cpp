@@ -1,17 +1,20 @@
 #include "imgui.h"
-#include "misc/cpp/imgui_stdlib.h"
 #include "TextEditor.h"
 #include <string>
 
 #include "editor.h"
 #include "assembler.h"
+#include "isa.h"
 
 TextEditor editor;
+
+bool showEditorWindow = true;
 
 bool isPaused = true;
 int rtps = 10;
 bool rtpsLimit = true;
 bool stepInstruction = false;
+bool highlightCurrentLine = true;
 
 TextEditor::LanguageDefinition DeafultAssemblerLang() {
     TextEditor::LanguageDefinition langDef;
@@ -39,6 +42,13 @@ TextEditor::LanguageDefinition DeafultAssemblerLang() {
     return langDef;
 }
 
+void highlight_line(){
+    editor.SetSelection(
+        TextEditor::Coordinates{getLine[pc], 0},
+        TextEditor::Coordinates{getLine[pc], INT_MAX}
+    );
+}
+
 void do_editor(){
     static bool init = true;
     if (init){
@@ -50,6 +60,7 @@ void do_editor(){
         palette[(int)TextEditor::PaletteIndex::Number] = 0xffA8CEB5;
         palette[(int)TextEditor::PaletteIndex::Comment] = 0xff55996A;
         palette[(int)TextEditor::PaletteIndex::Keyword] = 0xffFEDC9C;
+        palette[(int)TextEditor::PaletteIndex::ErrorMarker] = 0x800000ff;
         editor.SetPalette(palette);
 
         init = false;
@@ -60,7 +71,7 @@ void do_editor(){
     ImGui::SetNextWindowPos(ImVec2(1600-500-1, 20), ImGuiCond_FirstUseEver);
 
     //compile button
-    ImGui::Begin("Code editor");
+    ImGui::Begin("Code editor", &showEditorWindow);
     ImGui::Indent(ImGui::GetStyle().FramePadding.y);
     if (ImGui::Button("Compile")) init_rom();
     ImGui::Unindent(ImGui::GetStyle().FramePadding.y);
@@ -73,14 +84,18 @@ void do_editor(){
     ImGui::SetItemTooltip("F10");
     //rtps
     ImGui::SameLine();
-    ImGui::PushItemWidth(100);
+    ImGui::PushItemWidth(75);
     ImGui::DragInt("##", &rtps, 1, 1, INT_MAX, nullptr, ImGuiSliderFlags_ClampOnInput);
     ImGui::SetItemTooltip("rtps");
     ImGui::PopItemWidth();
     //unlimited rtps
     ImGui::SameLine();
     ImGui::Checkbox("rtps limit", &rtpsLimit);
-
+    ImGui::SameLine();
+    ImGui::Checkbox("follow code", &highlightCurrentLine);
+    ImGui::SameLine();
+    if (ImGui::Button(" ", ImVec2(ImGui::GetItemRectSize().y,0))) highlight_line();
+    ImGui::SetItemTooltip("highlight current line");
 
     ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[1]);
     editor.Render("CodeEditor");

@@ -7,18 +7,22 @@
 #include "display.h"
 #include "assembler.h"
 #include "editor.h"
+#include "monitors.h"
 
 #include "isa.h"
 
 int main(int argc, char const *argv[]){
 
-    int windowWidth = 1600;
-    int windowHeight = 900;
+	int windowWidth = 1600;
+	int windowHeight = 900;
+	int FPS = 60;
+
+	double frameTime = 1/(double)FPS;
 
 	SetConfigFlags(FLAG_WINDOW_RESIZABLE);
 	InitWindow(windowWidth, windowHeight, "MNemulator");
 	SetExitKey(KEY_NULL);
-	SetTargetFPS(60);
+	SetTargetFPS(FPS);
 
 	rlImGuiSetup(true);
 	ImGui::GetIO().ConfigWindowsMoveFromTitleBarOnly = true;
@@ -35,7 +39,9 @@ int main(int argc, char const *argv[]){
 	draw_pixel(15, 15);
 	draw_pixel(DISPLAY_MAX_SIZE-1, DISPLAY_MAX_SIZE-1);
 
-
+	double lastInstrTime = 0;
+	double ipsTimer = 0;
+	int ipsCounter = 0;
 
 	while (!WindowShouldClose()){
 		BeginDrawing(); //raylib
@@ -45,10 +51,34 @@ int main(int argc, char const *argv[]){
 		rlImGuiBegin(); //imgui
 
 		update_display();
-
-		while (stepInstruction){
+		
+		//execution loop
+		static bool wasPaused = true;
+		if (wasPaused && !isPaused) lastInstrTime = GetTime();
+		wasPaused = isPaused;
+		double instrInterval = CLOCK_SPEED/rtps;
+		double currentTime = GetTime();
+		if (!isPaused){
+			while (((GetTime() - lastInstrTime >= instrInterval) || !rtpsLimit) && (GetTime() - currentTime < frameTime)){
+				exec_instr(rom[pc]);
+				lastInstrTime += instrInterval;
+				ipsCounter++;
+			}
+			get_change();
+			if (highlightCurrentLine) highlight_line();
+		}
+		if (stepInstruction){
 			exec_instr(rom[pc]);
+			get_change();
+			if (highlightCurrentLine) highlight_line();
+			ipsCounter++;
 			stepInstruction = false;
+		}
+
+		if(GetTime() - ipsTimer >= 1){
+			ipsTimer = GetTime();
+			ips = ipsCounter;
+			ipsCounter = 0;
 		}
 
 		gui();

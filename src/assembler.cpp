@@ -12,6 +12,7 @@
 #include <iostream>
 
 uint32_t rom[1<<ROM_ADDRESS_SIZE];
+int getLine[1<<ROM_ADDRESS_SIZE];
 
 void init_rom(){
     reset_cpu();
@@ -19,6 +20,7 @@ void init_rom(){
     std::string editorContent = editor.GetText();
 
     std::fill(std::begin(rom), std::end(rom), 0);
+    std::fill(std::begin(getLine), std::end(getLine), 0);
     uint16_t pc_ = 0;
     uint32_t lineNr = 0;
 
@@ -78,6 +80,7 @@ void init_rom(){
             }
         }
         std::cout << "pc = " << pc_ << ", " << rom[pc_] << "\n";
+        getLine[pc_] = lineNr - 1;
         pc_++;
     }
 }

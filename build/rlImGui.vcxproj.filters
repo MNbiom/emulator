@@ -16,9 +16,6 @@
     <ClCompile Include="C:\Users\tomek\Desktop\VSC2\c++\emulator\include\imgui\imgui_tables.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="C:\Users\tomek\Desktop\VSC2\c++\emulator\include\imgui\misc\cpp\imgui_stdlib.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="C:\Users\tomek\Desktop\VSC2\c++\emulator\include\ImGuiFileDialog\ImGuiFileDialog.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>

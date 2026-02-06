@@ -1,12 +1,12 @@
+#include "display.h"
+
 #include "raylib.h"
 #include "imgui.h"
-
-#include "display.h"
 
 #include <cstdint>
 
 bool showDisplayWindow = true;
-bool resetDisplayPos = false;
+bool resetDisplayPos = true;
 bool resetDisplaySize = false;
 
 const uint16_t DISPLAY_MAX_SIZE = 256;
@@ -55,7 +55,6 @@ void do_display(){
     }
     ImGui::SetNextWindowSize(ImVec2(display_window_size, 48+display_window_size-2*ImGui::GetStyle().WindowBorderSize));
 
-    ImGui::SetNextWindowPos(ImVec2(1,20), ImGuiCond_FirstUseEver);
     if (resetDisplayPos){
         ImGui::SetNextWindowPos(ImVec2(1,20));
         resetDisplayPos = false;
