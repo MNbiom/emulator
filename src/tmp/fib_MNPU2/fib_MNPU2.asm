@@ -8,12 +8,12 @@ start:
 AST R1
 ADD R2
 RST R1
-OUT 0
+RST R7
 
 AST R1
 ADD R2
 RST R2
-OUT 0
+RST R7
 
 BRC TRUE
 start

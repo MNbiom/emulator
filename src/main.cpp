@@ -54,15 +54,32 @@ int main(int argc, char const *argv[]){
 		
 		//execution loop
 		static bool wasPaused = true;
-		if (wasPaused && !isPaused) lastInstrTime = GetTime();
+		static bool wasRtpsLimit = true;
+		if ((wasPaused && !isPaused) || (!wasRtpsLimit && rtpsLimit)) lastInstrTime = GetTime();
 		wasPaused = isPaused;
+		wasRtpsLimit = rtpsLimit;
 		double instrInterval = CLOCK_SPEED/rtps;
-		double currentTime = GetTime();
+		double startTime = GetTime();
+		int instrCounter = 0;
 		if (!isPaused){
-			while (((GetTime() - lastInstrTime >= instrInterval) || !rtpsLimit) && (GetTime() - currentTime < frameTime)){
-				exec_instr(rom[pc]);
-				lastInstrTime += instrInterval;
-				ipsCounter++;
+			if (rtpsLimit){
+				while (((GetTime() - lastInstrTime >= instrInterval)) && (GetTime() - startTime < frameTime)){
+					exec_instr(rom[pc]);
+					lastInstrTime += instrInterval;
+					ipsCounter++;
+				}
+			}
+			else{
+				while (true) {
+					exec_instr(rom[pc]);
+					ipsCounter++;
+					instrCounter++;
+					if (instrCounter & 0x100000) {
+						instrCounter = 0;
+						if (GetTime() - startTime >= frameTime)
+							break;
+					}
+				}
 			}
 			get_change();
 			if (highlightCurrentLine) highlight_line();
