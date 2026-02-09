@@ -4,17 +4,9 @@
 #include <string>
 #include <unordered_map>
 
+#include "editor.h"
+
 ////////////////////////////////////////////////////////////////
-
-constexpr uint8_t BIT_WIDTH = 8;
-constexpr uint32_t BIT_LIMIT = (1 << BIT_WIDTH) - 1;
-//constexpr uint8_t REG_AMOUNT = 8;
-constexpr uint8_t IO_AMOUNT = 8;
-//constexpr uint8_t FLAG_AMOUNT = 8;
-
-//constexpr uint8_t ROM_ADDRESS_SIZE = 14;
-constexpr uint8_t OPCODE_BIT_SIZE = 5;
-constexpr uint8_t OPCODE_SHIFT = 3;
 
 const std::unordered_map<std::string, uint32_t> codes = {
     //opcode
@@ -76,6 +68,12 @@ uint32_t reg[REG_AMOUNT] = {0};
 uint32_t acc = 0;
 bool flag[FLAG_AMOUNT] = {0};
 uint32_t out[IO_AMOUNT] = {0};
+uint32_t stack[1<<SP_ADDRESS_SIZE] = {0};
+uint32_t sp = 0;
+uint32_t cStack[1<<SP_ADDRESS_SIZE] = {0};
+uint32_t cSp = 0;
+uint32_t ram[1<<RAM_ADDRESS_SIZE] = {0};
+uint32_t poi = 0;
 
 void reset_cpu(){
     pc = 0;
@@ -83,6 +81,12 @@ void reset_cpu(){
     std::fill(std::begin(reg), std::end(reg), 0);
     std::fill(std::begin(flag), std::end(flag), 0);
     std::fill(std::begin(out), std::end(out), 0);
+    std::fill(std::begin(stack), std::end(stack), 0);
+    sp = 0;
+    std::fill(std::begin(cStack), std::end(cStack), 0);
+    cSp = 0;
+    std::fill(std::begin(ram), std::end(ram), 0);
+    poi = 0;
 }
 
 void update_flags(uint32_t aluOut){
@@ -92,7 +96,7 @@ void update_flags(uint32_t aluOut){
     flag[3] = aluOut < (BIT_LIMIT + 1); //LT, NCARRY
     flag[4] = (aluOut < (BIT_LIMIT + 1)) || (aluOut & BIT_LIMIT); //LEQ
     flag[5] = (aluOut >= (BIT_LIMIT + 1)) && ((aluOut & BIT_LIMIT) != 0); //GT
-    flag[6] = (aluOut >= (BIT_LIMIT + 1)); //GEQ
+    flag[6] = (aluOut >= (BIT_LIMIT + 1)); //GEQ, CARRY
     flag[7] = (aluOut & 1) == 1; //MSB/LSB    curent setting = LSB
 }
 
@@ -101,7 +105,7 @@ void exec_instr(uint32_t instruction){
     static uint32_t opcode = 0;
     static uint32_t x = 0;
     static uint32_t tmp = 0;
-
+    static uint32_t SWPtmp = 0;
     if (immediates == 0){
         x = instruction & 7;
         opcode = (instruction >> OPCODE_SHIFT) & ((1 << OPCODE_BIT_SIZE)-1);
@@ -130,47 +134,66 @@ void exec_instr(uint32_t instruction){
             case 5: //CMP
                 update_flags(acc + (~reg[x]&BIT_LIMIT) + 1);
                 break;
-            case 6:
-                
+            case 6: //INC
+                tmp = reg[x] + 1;
+                update_flags(tmp);
+                reg[x] = tmp & BIT_LIMIT;
                 break;
-            case 7:
-                
+            case 7: //DEC
+                tmp = reg[x] + BIT_LIMIT;
+                update_flags(tmp);
+                reg[x] = tmp & BIT_LIMIT;
                 break;
-            case 8:
-                
+            case 8: //RSH
+                tmp = reg[x] >> 1;
+                update_flags(tmp);
+                reg[x] = tmp & BIT_LIMIT;
                 break;
-            case 9:
-                
+            case 9: // LSH
+                tmp = reg[x] << 1;
+                update_flags(tmp);
+                reg[x] = tmp & BIT_LIMIT;
                 break;
-            case 10:
-                
+            case 10: //XOR
+                tmp = acc ^ reg[x];
+                update_flags(tmp);
+                acc = tmp & BIT_LIMIT;
                 break;
-            case 11:
-                
+            case 11: //OR
+                tmp = acc | reg[x];
+                update_flags(tmp);
+                acc = tmp & BIT_LIMIT;
                 break;
-            case 12:
-                
+            case 12: //AND
+                tmp = acc & reg[x];
+                update_flags(tmp);
+                acc = tmp & BIT_LIMIT;
                 break;
-            case 13:
-                
+            case 13: //NOT
+                tmp = ~reg[x]&BIT_LIMIT;
+                update_flags(tmp);
+                reg[x] = tmp & BIT_LIMIT;
                 break;
             case 14: //IMM
                 immediates = 1;
                 break;
-            case 15:
-                
+            case 15: //IMA
+                immediates = 1;
                 break;
-            case 16:
-                
+            case 16: // SWP
+                immediates = 2;
                 break;
-            case 17:
-                
+            case 17: //CALL
+                immediates = 2;
+                cStack[cSp] = pc + 3;
+                cSp++;
                 break;
-            case 18:
-                
+            case 18: //RET
+                cSp--;
+                pc = cStack[cSp] - 1;
                 break;
-            case 19:
-                
+            case 19: //IN
+                //request_input();
                 break;
             case 20: //OUT
                 out[x] = acc;
@@ -178,35 +201,49 @@ void exec_instr(uint32_t instruction){
             case 21: //BRC
                 immediates = 1;
                 break;
-            case 22:
-                
+            case 22: //PUSH
+                stack[sp] = acc;
+                sp++;
                 break;
-            case 23:
-                
+            case 23: //POP
+                sp--;
+                tmp = stack[sp];
+                update_flags(tmp);
+                acc = tmp;
                 break;
-            case 24:
-                
+            case 24: //POI
+                poi = reg[x];
                 break;
-            case 25:
-                
+            case 25: //MST
+                ram[poi] = acc;
                 break;
-            case 26:
-                
+            case 26: //MLD
+                tmp = ram[poi];
+                update_flags(tmp);
+                acc = tmp;
                 break;
-            case 27:
-                
+            case 27: //ADDC
+                tmp = acc + reg[x] + flag[6];
+                update_flags(tmp);
+                acc = tmp;
                 break;
-            case 28:
-                
+            case 28: //SUBC
+                tmp = acc + (~reg[x]&BIT_LIMIT) + flag[6];
+                update_flags(tmp);
+                acc = tmp;
                 break;
-            case 29:
-                
+            case 29: //NEG
+                tmp = (~reg[x]&BIT_LIMIT) + 1;
+                update_flags(tmp);
+                reg[x] = tmp;
                 break;
-            case 30:
-                
+            case 30: //NEGA
+                tmp = (~acc&BIT_LIMIT) + 1;
+                update_flags(tmp);
+                acc = tmp;
                 break;
-            case 31:
-                
+            case 31: //HALT
+                isPaused = true;
                 break;
             default:
                 break;
@@ -216,6 +253,17 @@ void exec_instr(uint32_t instruction){
         switch (opcode){
         case 14: //IMM
             reg[x] = instruction & BIT_LIMIT;
+            break;
+        case 15: //IMA
+            acc = instruction & BIT_LIMIT;
+            break;
+        case 16: //SWP
+            if (immediates == 2) SWPtmp = instruction & 0b111111;
+            else pc = (SWPtmp | (instruction << 6)) - 1;
+            break;
+        case 17: //CALL
+            if (immediates == 2) SWPtmp = instruction & 0b111111;
+            else pc = (SWPtmp | (instruction & 0b11111111000000)) - 1; //like this, bc i want it to be universal, and paging like MNPU2 has is unusual i think
             break;
         case 21: //BRC
             if (flag[x] == true) pc = instruction - 1;

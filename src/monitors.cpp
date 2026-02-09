@@ -19,6 +19,10 @@ bool showFlagsWindow = true;
 bool resetFlagsPos = true;
 bool resetFlagsSize = true;
 
+bool showRamWindow = true;
+bool resetRamPos = true;
+bool resetRamSize = true;
+
 void get_change(){
     bool change = false;
     static uint32_t oldReg[REG_AMOUNT] = {0};
@@ -94,7 +98,7 @@ void do_regs(){
 
 void do_flags(){
     if (resetFlagsPos){
-        ImGui::SetNextWindowPos(ImVec2(1 + (2*DISPLAY_MAX_SIZE)+2*ImGui::GetStyle().WindowBorderSize + 1 + 92,20));
+        ImGui::SetNextWindowPos(ImVec2(1 + (2*DISPLAY_MAX_SIZE)+2*ImGui::GetStyle().WindowBorderSize + 1 + 92, 20));
         resetFlagsPos = false;
     }
     if (resetFlagsSize){
@@ -160,6 +164,38 @@ void do_flags(){
         ImGui::EndTable();
     }
 
+    ImGui::End();
+    ImGui::PopStyleVar();
+}
+
+void do_ram(){
+    if (resetRamPos){
+        ImGui::SetNextWindowPos(ImVec2(1, 581));
+        resetRamPos = false;
+    }
+    if (resetRamSize){
+        ImGui::SetNextWindowSize(ImVec2(0, 308));
+        resetRamSize = false;
+    }
+    ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(1, 0));
+    ImGui::Begin("Ram", &showRamWindow);
+    if (ImGui::BeginTable("Ram table", 17, ImGuiTableFlags_Borders)){
+        ImGui::TableSetupColumn(std::to_string(poi).c_str());
+        for (int i = 0; i < 16; i++) ImGui::TableSetupColumn(std::to_string(i).c_str());
+        ImGui::TableHeadersRow();
+        for (int i = 0; i < (1 << RAM_ADDRESS_SIZE); i += 16){
+            ImGui::TableNextRow();
+            ImGui::TableSetColumnIndex(0);
+            ImGui::TableSetBgColor(ImGuiTableBgTarget_CellBg, 0xff333030);
+            ImGui::Text("%i", i);
+            for (int j = 0; j < 16; j++){
+                ImGui::TableSetColumnIndex(j+1);
+                if (i+j == poi) ImGui::TableSetBgColor(ImGuiTableBgTarget_CellBg, 0x40ffffff);
+                ImGui::Text("%i", ram[i+j]);
+            }
+        }
+        ImGui::EndTable();
+    }
     ImGui::End();
     ImGui::PopStyleVar();
 }

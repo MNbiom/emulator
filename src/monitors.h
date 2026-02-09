@@ -13,6 +13,10 @@ extern bool showFlagsWindow;
 extern bool resetFlagsPos;
 extern bool resetFlagsSize;
 
+extern bool showRamWindow;
+extern bool resetRamPos;
+extern bool resetRamSize;
+
 void get_change();
 
 void do_ips();
@@ -20,3 +24,5 @@ void do_ips();
 void do_regs();
 
 void do_flags();
+
+void do_ram();

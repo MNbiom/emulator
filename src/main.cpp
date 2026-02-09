@@ -15,7 +15,7 @@ int main(int argc, char const *argv[]){
 
 	int windowWidth = 1600;
 	int windowHeight = 900;
-	int FPS = 60;
+	int FPS = 144;
 
 	double frameTime = 1/(double)FPS;
 

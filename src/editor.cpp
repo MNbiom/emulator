@@ -35,8 +35,56 @@ TextEditor::LanguageDefinition DeafultAssemblerLang() {
     langDef.mTokenRegexStrings.push_back(std::make_pair<std::string, TextEditor::PaletteIndex>("[a-zA-Z_][a-zA-Z0-9_]*", TextEditor::PaletteIndex::Identifier));
 
     static const char* const keywords[] = {
+        "NOOP",
+        "RST",
+        "AST",
         "ADD",
-        "SUB"
+        "BSUB,"
+        "SUB",
+        "CMP",
+        "INC",
+        "DEC",
+        "RSH",
+        "LSH",
+        "XOR",
+        "OR",
+        "AND",
+        "NOT",
+        "IMM",
+        "IMA",
+        "SWP",
+        "CALL",
+        "RET",
+        "IN",
+        "OUT",
+        "BRC",
+        "PUSH",
+        "POP",
+        "POI",
+        "MST",
+        "MLD",
+        "ADDC",
+        "SUBC",
+        "NEG",
+        "NEGA",
+        "HALT",
+        
+        //regs
+        "R0",
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5",
+        "R6",
+        "R7",
+        
+        //flags
+        "TRUE",
+        "NEQ",
+        "NZERO",
+        "EQ",
+        "ZERO"
     };
     
     for (auto& k : keywords)
@@ -86,7 +134,7 @@ void do_editor(){
     if (ImGui::Button("Compile")) init_rom();
     ImGui::Unindent(ImGui::GetStyle().FramePadding.y);
     //play/pause
-    ImGui::SameLine(0, 25);
+    ImGui::SameLine();
     if (ImGui::Button(isPaused ? "▶" : "⏸", ImVec2(ImGui::GetItemRectSize().y,0))) isPaused = !isPaused;
     //step
     ImGui::SameLine();
@@ -111,6 +159,8 @@ void do_editor(){
     ImGui::SameLine();
     if (ImGui::Button("##Highlight current line", ImVec2(ImGui::GetItemRectSize().y,0))) highlight_line();
     ImGui::SetItemTooltip("Highlight current line");
+    ImGui::SameLine();
+    ImGui::Text("pc = %i", pc);
 
     ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[1]);
     editor.Render("CodeEditor");
