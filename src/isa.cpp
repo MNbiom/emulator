@@ -68,8 +68,8 @@ uint32_t reg[REG_AMOUNT] = {0};
 uint32_t acc = 0;
 bool flag[FLAG_AMOUNT] = {0};
 uint32_t out[IO_AMOUNT] = {0};
-uint32_t stack[1<<SP_ADDRESS_SIZE] = {0};
-uint32_t sp = 0;
+uint32_t dStack[1<<SP_ADDRESS_SIZE] = {0};
+uint32_t dSp = 0;
 uint32_t cStack[1<<SP_ADDRESS_SIZE] = {0};
 uint32_t cSp = 0;
 uint32_t ram[1<<RAM_ADDRESS_SIZE] = {0};
@@ -81,8 +81,8 @@ void reset_cpu(){
     std::fill(std::begin(reg), std::end(reg), 0);
     std::fill(std::begin(flag), std::end(flag), 0);
     std::fill(std::begin(out), std::end(out), 0);
-    std::fill(std::begin(stack), std::end(stack), 0);
-    sp = 0;
+    std::fill(std::begin(dStack), std::end(dStack), 0);
+    dSp = 0;
     std::fill(std::begin(cStack), std::end(cStack), 0);
     cSp = 0;
     std::fill(std::begin(ram), std::end(ram), 0);
@@ -202,12 +202,13 @@ void exec_instr(uint32_t instruction){
                 immediates = 1;
                 break;
             case 22: //PUSH
-                stack[sp] = acc;
-                sp++;
+                dStack[dSp] = acc;
+                dSp++;
                 break;
             case 23: //POP
-                sp--;
-                tmp = stack[sp];
+                dSp--;
+                tmp = dStack[dSp];
+                dStack[dSp] = 0;
                 update_flags(tmp);
                 acc = tmp;
                 break;

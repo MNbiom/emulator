@@ -23,10 +23,23 @@ bool showRamWindow = true;
 bool resetRamPos = true;
 bool resetRamSize = true;
 
+bool showDStackWindow = true;
+bool resetDStackPos = true;
+bool resetDStackSize = true;
+
+bool showCStackWindow = true;
+bool resetCStackPos = true;
+bool resetCStackSize = true;
+
+bool showOutWindow = true;
+bool resetOutPos = true;
+bool resetOutSize = true;
+
 void get_change(){
     bool change = false;
     static uint32_t oldReg[REG_AMOUNT] = {0};
     static uint32_t oldAcc = 0;
+    static uint32_t oldOut[IO_AMOUNT] = {0};
     for (int i = 0; i < REG_AMOUNT; i++){
         if (oldReg[i] != reg[i]){
             changedValue = i;
@@ -39,12 +52,19 @@ void get_change(){
         oldAcc = acc;
         change = true;
     }
+    for (int i = 0; i < IO_AMOUNT; i++){
+        if (oldOut[i] != out[i]){
+            changedValue = i+(REG_AMOUNT+1);
+            oldOut[i] = out[i];
+            change = true;
+        }
+    }
     if (!change) changedValue = INT_MAX;
 }
 
 void do_ips(){
     if (resetIpsPos){
-        ImGui::SetNextWindowPos(ImVec2(1, 870));
+        ImGui::SetNextWindowPos(ImVec2(1033, 20));
         resetIpsPos = false;
     }
 
@@ -91,14 +111,13 @@ void do_regs(){
         }
         ImGui::EndTable();
     }
-
     ImGui::End();
     ImGui::PopStyleVar();
 }
 
 void do_flags(){
     if (resetFlagsPos){
-        ImGui::SetNextWindowPos(ImVec2(1 + (2*DISPLAY_MAX_SIZE)+2*ImGui::GetStyle().WindowBorderSize + 1 + 92, 20));
+        ImGui::SetNextWindowPos(ImVec2(1 + (2*DISPLAY_MAX_SIZE)+2*ImGui::GetStyle().WindowBorderSize + 1 + 92, 37));
         resetFlagsPos = false;
     }
     if (resetFlagsSize){
@@ -163,7 +182,6 @@ void do_flags(){
 
         ImGui::EndTable();
     }
-
     ImGui::End();
     ImGui::PopStyleVar();
 }
@@ -199,3 +217,101 @@ void do_ram(){
     ImGui::End();
     ImGui::PopStyleVar();
 }
+
+void do_dstack(){
+    if (resetDStackPos){
+        ImGui::SetNextWindowPos(ImVec2(516, 210));
+        resetDStackPos = false;
+    }
+    if (resetDStackSize){
+        ImGui::SetNextWindowSize(ImVec2(0, 0));
+        resetDStackSize = false;
+    }
+    ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(1, 0));
+    ImGui::Begin("dStack", &showDStackWindow);
+    if (ImGui::BeginTable("dStack table", 9, ImGuiTableFlags_Borders)){
+        ImGui::TableSetupColumn(std::to_string(dSp).c_str());
+        for (int i = 0; i < 8; i++) ImGui::TableSetupColumn(std::to_string(i).c_str());
+        ImGui::TableHeadersRow();
+        for (int i = 0; i < (1 << SP_ADDRESS_SIZE); i += 8){
+            ImGui::TableNextRow();
+            ImGui::TableSetColumnIndex(0);
+            ImGui::TableSetBgColor(ImGuiTableBgTarget_CellBg, 0xff333030);
+            ImGui::Text("%i", i);
+            for (int j = 0; j < 8; j++){
+                ImGui::TableSetColumnIndex(j+1);
+                if (i+j == dSp) ImGui::TableSetBgColor(ImGuiTableBgTarget_CellBg, 0x40ffffff);
+                ImGui::Text("%i", dStack[i+j]);
+            }
+        }
+        ImGui::EndTable();
+    }
+    ImGui::End();
+    ImGui::PopStyleVar();
+}
+
+void do_cstack(){
+    if (resetCStackPos){
+        ImGui::SetNextWindowPos(ImVec2(664, 210));
+        resetCStackPos = false;
+    }
+    if (resetCStackSize){
+        ImGui::SetNextWindowSize(ImVec2(0, 0));
+        resetCStackSize = false;
+    }
+    ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(1, 0));
+    ImGui::Begin("cStack", &showCStackWindow);
+    if (ImGui::BeginTable("cStack table", 9, ImGuiTableFlags_Borders)){
+        ImGui::TableSetupColumn(std::to_string(cSp).c_str());
+        for (int i = 0; i < 8; i++) ImGui::TableSetupColumn(std::to_string(i).c_str());
+        ImGui::TableHeadersRow();
+        for (int i = 0; i < (1 << SP_ADDRESS_SIZE); i += 8){
+            ImGui::TableNextRow();
+            ImGui::TableSetColumnIndex(0);
+            ImGui::TableSetBgColor(ImGuiTableBgTarget_CellBg, 0xff333030);
+            ImGui::Text("%i", i);
+            for (int j = 0; j < 8; j++){
+                ImGui::TableSetColumnIndex(j+1);
+                if (i+j == cSp) ImGui::TableSetBgColor(ImGuiTableBgTarget_CellBg, 0x40ffffff);
+                ImGui::Text("%i", cStack[i+j]);
+            }
+        }
+        ImGui::EndTable();
+    }
+    ImGui::End();
+    ImGui::PopStyleVar();
+}
+
+void do_out(){
+    if (resetOutPos){
+        ImGui::SetNextWindowPos(ImVec2(770, 37));
+        resetOutPos = false;
+    }
+    if (resetOutSize){
+        ImGui::SetNextWindowSize(ImVec2(0, 0));
+        resetOutSize = false;
+    }
+    ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(1, 0));
+    ImGui::Begin("Out", &showOutWindow);
+
+    if (ImGui::BeginTable("Out table", 2, ImGuiTableFlags_Borders)){
+        ImGui::TableSetupColumn("Out");
+        ImGui::TableSetupColumn("Value");
+        ImGui::TableHeadersRow();
+
+        for (int i = 0; i < IO_AMOUNT; i++){
+            ImGui::TableNextRow();
+            if (changedValue == i+(REG_AMOUNT+1)) ImGui::TableSetBgColor(ImGuiTableBgTarget_RowBg0, 0x40ffffff);
+            ImGui::TableSetColumnIndex(0);
+            ImGui::Text("Out %i", i);
+            ImGui::TableSetColumnIndex(1);
+            ImGui::Text("%i", out[i]);
+        }
+        ImGui::EndTable();
+    }
+    ImGui::End();
+    ImGui::PopStyleVar();
+}
+
+
+//ImVec2 posTest = ImGui::GetWindowPos();

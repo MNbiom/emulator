@@ -30,7 +30,10 @@ extern uint32_t reg[];
 extern uint32_t acc;
 extern bool flag[];
 extern uint32_t out[];
-extern uint32_t stack[];
+extern uint32_t dStack[];
 extern uint32_t cStack[];
 extern uint32_t ram[];
 extern uint32_t poi;
+
+extern uint32_t dSp;
+extern uint32_t cSp;
