@@ -59,7 +59,15 @@ const std::unordered_map<std::string, uint32_t> codes = {
     {"NEQ", 1},
     {"NZERO", 1},
     {"EQ", 2},
-    {"ZERO", 2}
+    {"ZERO", 2},
+    {"LT", 3},
+    {"NCARRY", 3},
+    {"LEQ", 4},
+    {"GT", 5},
+    {"GEQ", 6},
+    {"CARRY", 6},
+    {"MSB", 7},
+    {"LSB", 7}
 };
 
 uint16_t pc = 0;
