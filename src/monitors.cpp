@@ -64,10 +64,9 @@ void get_change(){
 
 void do_ips(){
     if (resetIpsPos){
-        ImGui::SetNextWindowPos(ImVec2(1033, 20));
+        ImGui::SetNextWindowPos(ImVec2(862, 20));
         resetIpsPos = false;
     }
-
     ImGui::SetNextWindowBgAlpha(0.35f);
     ImGui::Begin("IPS", &showIpsWindow, ImGuiWindowFlags_NoDecoration | ImGuiWindowFlags_AlwaysAutoResize | ImGuiWindowFlags_NoFocusOnAppearing | ImGuiWindowFlags_NoNav);
     ImGui::Text("IPS = %i", ips);
