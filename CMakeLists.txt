@@ -5,8 +5,8 @@ project(emulator VERSION 0.1.0 LANGUAGES C CXX)
 add_subdirectory(include/raylib)
 
 #raygui
-set(RAYGUI_DIR ${CMAKE_SOURCE_DIR}/include/raygui/src)
-include_directories(${RAYGUI_DIR})
+# set(RAYGUI_DIR ${CMAKE_SOURCE_DIR}/include/raygui/src)
+# include_directories(${RAYGUI_DIR})
 
 #imgui
 set(IMGUI_DIR ${CMAKE_SOURCE_DIR}/include/imgui)
@@ -42,9 +42,10 @@ file(GLOB SRC_FILES
 
 add_executable(main ${SRC_FILES})
 
-target_include_directories(main PRIVATE
-    ${RAYGUI_DIR}
-)
+#raygui
+# target_include_directories(main PRIVATE
+#     ${RAYGUI_DIR}
+# )
 
 target_link_libraries(main PRIVATE
     raylib
