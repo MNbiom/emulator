@@ -84,7 +84,15 @@ TextEditor::LanguageDefinition DeafultAssemblerLang() {
         "NEQ",
         "NZERO",
         "EQ",
-        "ZERO"
+        "ZERO",
+        "LT",
+        "NCARRY",
+        "LEQ",
+        "GT",
+        "GEQ",
+        "CARRY",
+        "MSB",
+        "LSB"
     };
     
     for (auto& k : keywords)
