@@ -9,9 +9,23 @@
 			},
 			"command": "cmake --build .",
 			"group": {
-                "kind": "build",
-                "isDefault": true
-            }
+				"kind": "build",
+				"isDefault": true
+			},
+			"problemMatcher": []
+		},
+		{
+			"label": "cmake release",
+			"type": "shell",
+			"options": {
+				"cwd": "${fileDirname}/../build"
+			},
+			"command": "cmake --build . --config Release",
+			"group": {
+				"kind": "build",
+				"isDefault": false
+			},
+			"problemMatcher": []
 		}
 	]
 }
