@@ -5,6 +5,7 @@
 #include <unordered_map>
 
 #include "editor.h"
+#include "display.h"
 
 ////////////////////////////////////////////////////////////////
 
@@ -205,6 +206,13 @@ void exec_instr(uint32_t instruction){
                 break;
             case 20: //OUT
                 out[x] = acc;
+                if (x == OutY) draw_pixel(out[OutX], out[OutY]);
+                if (x == OutControl){
+                    if (out[OutControl]&0b10) {
+                        clear_display();
+                    } //clear screen
+                    if (out[OutControl]&0b1) update_display(); //buffer
+                }
                 break;
             case 21: //BRC
                 immediates = 1;

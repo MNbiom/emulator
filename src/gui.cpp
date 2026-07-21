@@ -159,6 +159,14 @@ void do_menu(){
 
             ImGui::EndMenu();
 		}
+        
+        if (ImGui::BeginMenu("Settings")){
+            if (ImGui::MenuItem("Display settings")){
+                showDisplaySettings = true;
+            }
+        ImGui::EndMenu();
+        }
+
 		ImGui::EndMainMenuBar();
 	}
 }
@@ -166,6 +174,7 @@ void do_menu(){
 void gui(){
     do_menu();
     do_file_dialog();
+    if (showDisplaySettings) do_display_settings();
     if (showDisplayWindow) do_display();
     if (showEditorWindow) do_editor();
     if (showIpsWindow) do_ips();

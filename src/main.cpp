@@ -34,10 +34,7 @@ int main(int argc, char const *argv[]){
 
 	init_display();
 	clear_display();
-	draw_pixel(0, 0);
-	draw_pixel(2, 2);
-	draw_pixel(15, 15);
-	draw_pixel(DISPLAY_MAX_SIZE-1, DISPLAY_MAX_SIZE-1);
+	update_display();
 
 	double lastInstrTime = 0;
 	double ipsTimer = 0;
@@ -49,8 +46,6 @@ int main(int argc, char const *argv[]){
 		ClearBackground(Color{24, 24, 24, 255});
 
 		rlImGuiBegin(); //imgui
-
-		update_display();
 		
 		//execution loop
 		static bool wasPaused = true;
