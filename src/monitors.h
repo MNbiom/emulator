@@ -31,6 +31,7 @@ extern bool resetOutSize;
 
 extern bool showCPUSettings;
 extern bool flagSetting;
+extern bool disableHALT;
 
 void get_change();
 

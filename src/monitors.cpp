@@ -41,6 +41,7 @@ bool resetOutSize = true;
 
 bool showCPUSettings = false;
 bool flagSetting = false; // 0 - LSB, 1 - MSB
+bool disableHALT = false;
 
 
 
@@ -363,6 +364,8 @@ void do_cpu_settings(){
     }
     ImGui::SameLine();
     HelpMarker("Pick whether you want to have LSB or MSB flag");
+
+    ImGui::Checkbox("Disable HALT", &disableHALT);
 
     ImGui::End();
 }

@@ -276,7 +276,7 @@ void exec_instr(uint32_t instruction){
                 acc = tmp & BIT_LIMIT;
                 break;
             case 31: //HALT
-                isPaused = true;
+                if (!disableHALT) isPaused = true;
                 break;
             default:
                 break;
