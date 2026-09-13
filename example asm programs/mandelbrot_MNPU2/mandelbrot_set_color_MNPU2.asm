@@ -475,6 +475,13 @@ end_for_y:
 
 HALT
 
+IMA
+3
+OUT 4
+SWP
+0
+0
+
 ]next_page] 7
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;
