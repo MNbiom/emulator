@@ -72,6 +72,7 @@ const std::unordered_map<std::string, uint32_t> codes = {
 };
 
 uint16_t pc = 0;
+uint16_t page = 0;
 
 uint32_t reg[REG_AMOUNT] = {0};
 uint32_t acc = 0;
@@ -80,12 +81,14 @@ uint32_t out[IO_AMOUNT] = {0};
 uint32_t dStack[1<<SP_ADDRESS_SIZE] = {0};
 uint32_t dSp = 0;
 uint32_t cStack[1<<SP_ADDRESS_SIZE] = {0};
+uint32_t cStack_page[1<<SP_ADDRESS_SIZE] = {0};
 uint32_t cSp = 0;
 uint32_t ram[1<<RAM_ADDRESS_SIZE] = {0};
 uint32_t poi = 0;
 
 void reset_cpu(){
     pc = 0;
+    page = 0;
     acc = 0;
     std::fill(std::begin(reg), std::end(reg), 0);
     std::fill(std::begin(flag), std::end(flag), 0);
@@ -93,9 +96,12 @@ void reset_cpu(){
     std::fill(std::begin(dStack), std::end(dStack), 0);
     dSp = 0;
     std::fill(std::begin(cStack), std::end(cStack), 0);
+    std::fill(std::begin(cStack_page), std::end(cStack_page), 0);
     cSp = 0;
     std::fill(std::begin(ram), std::end(ram), 0);
     poi = 0;
+    clear_display();
+    update_display();
 }
 
 void update_flags(uint32_t aluOut){
@@ -195,11 +201,13 @@ void exec_instr(uint32_t instruction){
             case 17: //CALL
                 immediates = 2;
                 cStack[cSp] = pc + 3;
+                cStack_page[cSp] = page;
                 cSp++;
                 break;
             case 18: //RET
                 cSp--;
                 pc = cStack[cSp] - 1;
+                page = cStack_page[cSp];
                 break;
             case 19: //IN
                 //request_input();
@@ -276,11 +284,17 @@ void exec_instr(uint32_t instruction){
             break;
         case 16: //SWP
             if (immediates == 2) SWPtmp = instruction & 0b111111;
-            else pc = (SWPtmp | (instruction << 6)) - 1;
+            else {
+                pc = SWPtmp - 1;
+                page = instruction;
+            }
             break;
         case 17: //CALL
             if (immediates == 2) SWPtmp = instruction & 0b111111;
-            else pc = (SWPtmp | (instruction & 0b11111111000000)) - 1; //like this, bc i want it to be universal, and paging like MNPU2 has is unusual i think
+            else {
+                pc = SWPtmp - 1;
+                page = instruction;
+            }
             break;
         case 21: //BRC
             if (flag[x] == true) pc = instruction - 1;

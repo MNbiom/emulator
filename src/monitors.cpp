@@ -236,7 +236,7 @@ void do_dstack(){
             ImGui::TableNextRow();
             ImGui::TableSetColumnIndex(0);
             ImGui::TableSetBgColor(ImGuiTableBgTarget_CellBg, 0xff333030);
-            ImGui::Text("%i", i);
+            ImGui::Text("%i  ", i);
             for (int j = 0; j < 8; j++){
                 ImGui::TableSetColumnIndex(j+1);
                 if (i+j == dSp) ImGui::TableSetBgColor(ImGuiTableBgTarget_CellBg, 0x40ffffff);
@@ -251,7 +251,7 @@ void do_dstack(){
 
 void do_cstack(){
     if (resetCStackPos){
-        ImGui::SetNextWindowPos(ImVec2(664, 210));
+        ImGui::SetNextWindowPos(ImVec2(516, 264));
         resetCStackPos = false;
     }
     if (resetCStackSize){
@@ -264,16 +264,37 @@ void do_cstack(){
         ImGui::TableSetupColumn(std::to_string(cSp).c_str());
         for (int i = 0; i < 8; i++) ImGui::TableSetupColumn(std::to_string(i).c_str());
         ImGui::TableHeadersRow();
-        for (int i = 0; i < (1 << SP_ADDRESS_SIZE); i += 8){
-            ImGui::TableNextRow();
-            ImGui::TableSetColumnIndex(0);
-            ImGui::TableSetBgColor(ImGuiTableBgTarget_CellBg, 0xff333030);
-            ImGui::Text("%i", i);
-            for (int j = 0; j < 8; j++){
-                ImGui::TableSetColumnIndex(j+1);
-                if (i+j == cSp) ImGui::TableSetBgColor(ImGuiTableBgTarget_CellBg, 0x40ffffff);
-                ImGui::Text("%i", cStack[i+j]);
-            }
+        // for (int i = 0; i < (1 << SP_ADDRESS_SIZE); i += 8){
+        //     ImGui::TableNextRow();
+        //     ImGui::TableSetColumnIndex(0);
+        //     ImGui::TableSetBgColor(ImGuiTableBgTarget_CellBg, 0xff333030);
+        //     ImGui::Text("%i", i);
+        //     for (int j = 0; j < 8; j++){
+        //         ImGui::TableSetColumnIndex(j+1);
+        //         if (i+j == cSp) ImGui::TableSetBgColor(ImGuiTableBgTarget_CellBg, 0x40ffffff);
+        //         ImGui::Text("%i", cStack[i+j]);
+        //     }
+        // }
+
+        // pc
+        ImGui::TableNextRow();
+        ImGui::TableSetColumnIndex(0);
+        ImGui::TableSetBgColor(ImGuiTableBgTarget_CellBg, 0xff333030);
+        ImGui::Text("pc");
+        for (int i = 0; i < 8; i++){
+            ImGui::TableSetColumnIndex(i+1);
+            if (i == cSp) ImGui::TableSetBgColor(ImGuiTableBgTarget_CellBg, 0x40ffffff);
+            ImGui::Text("%i", cStack[i]);
+        }
+        //page
+        ImGui::TableNextRow();
+        ImGui::TableSetColumnIndex(0);
+        ImGui::TableSetBgColor(ImGuiTableBgTarget_CellBg, 0xff333030);
+        ImGui::Text("pag");
+        for (int i = 0; i < 8; i++){
+            ImGui::TableSetColumnIndex(i+1);
+            if (i == cSp) ImGui::TableSetBgColor(ImGuiTableBgTarget_CellBg, 0x40ffffff);
+            ImGui::Text("%i", cStack_page[i]);
         }
         ImGui::EndTable();
     }

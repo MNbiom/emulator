@@ -128,11 +128,11 @@ void do_editor(){
 
     ImGui::PushStyleVar(ImGuiStyleVar_WindowPadding, ImVec2(1, ImGui::GetStyle().FramePadding.y));
     if (resetEditorSize){
-        ImGui::SetNextWindowSize(ImVec2(500, 900-20-1));
+        ImGui::SetNextWindowSize(ImVec2(535, 900-20-1));
         resetEditorSize = false;
     }
     if (resetEditorPos){
-        ImGui::SetNextWindowPos(ImVec2(1600-500-1, 20));
+        ImGui::SetNextWindowPos(ImVec2(1600-535-1, 20));
         resetEditorPos = false;
     }
 
@@ -168,7 +168,7 @@ void do_editor(){
     if (ImGui::Button("##Highlight current line", ImVec2(ImGui::GetItemRectSize().y,0))) highlight_line();
     ImGui::SetItemTooltip("Highlight current line");
     ImGui::SameLine();
-    ImGui::Text("pc = %i", pc);
+    ImGui::Text("pc = %i, page = %i", pc, page);
 
     ImGui::PushFont(ImGui::GetIO().Fonts->Fonts[1]);
     editor.Render("CodeEditor");

@@ -59,7 +59,7 @@ int main(int argc, char const *argv[]){
 		if (!isPaused){
 			if (rtpsLimit){
 				while (((GetTime() - lastInstrTime >= instrInterval)) && (GetTime() - startTime < frameTime)){
-					exec_instr(rom[pc]);
+					exec_instr(rom[(page << 6) | pc]);
 					lastInstrTime += instrInterval;
 					ipsCounter++;
 				}

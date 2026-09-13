@@ -26,12 +26,14 @@ constexpr double CLOCK_SPEED = 8;
 extern const std::unordered_map<std::string, uint32_t> codes;
 
 extern uint16_t pc;
+extern uint16_t page;
 extern uint32_t reg[];
 extern uint32_t acc;
 extern bool flag[];
 extern uint32_t out[];
 extern uint32_t dStack[];
 extern uint32_t cStack[];
+extern uint32_t cStack_page[];
 extern uint32_t ram[];
 extern uint32_t poi;
 
