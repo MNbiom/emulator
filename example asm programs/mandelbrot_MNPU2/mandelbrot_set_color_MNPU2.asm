@@ -433,7 +433,7 @@ MST
         DEC R5
         AST R5 ; n-=1
         MST
-HALT
+
         SWP
         mandelbrot_while_page
         mandelbrot_while
