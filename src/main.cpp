@@ -58,15 +58,15 @@ int main(int argc, char const *argv[]){
 		int instrCounter = 0;
 		if (!isPaused){
 			if (rtpsLimit){
-				while (((GetTime() - lastInstrTime >= instrInterval)) && (GetTime() - startTime < frameTime)){
+				while (((GetTime() - lastInstrTime >= instrInterval)) && (GetTime() - startTime < frameTime && !isPaused)){
 					exec_instr(rom[(page << 6) | pc]);
 					lastInstrTime += instrInterval;
 					ipsCounter++;
 				}
 			}
 			else{
-				while (true) {
-					exec_instr(rom[pc]);
+				while (!isPaused) {
+					exec_instr(rom[(page << 6) | pc]);
 					ipsCounter++;
 					instrCounter++;
 					if (instrCounter & 0x100000) {
@@ -80,7 +80,7 @@ int main(int argc, char const *argv[]){
 			if (highlightCurrentLine) highlight_line();
 		}
 		if (stepInstruction){
-			exec_instr(rom[pc]);
+			exec_instr(rom[(page << 6) | pc]);
 			get_change();
 			if (highlightCurrentLine) highlight_line();
 			ipsCounter++;

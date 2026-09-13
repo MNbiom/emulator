@@ -43,6 +43,18 @@ void init_rom(){
             labels[label] = pc_;
             labels[label + "_page"] = page_;
         }
+        else if (tokens[0] == "$" && tokens.size() == 4 && tokens[2] == "="){
+            try { //try to convert a number
+                if (tokens[3].size() > 2 && tokens[3][0] == '0'){
+                    if (tokens[3][1] == 'b') labels[tokens[1]] = std::stoul(tokens[3].substr(2), nullptr, 2); //0b
+                    else if (tokens[3][1] == 'x') labels[tokens[1]] = std::stoul(tokens[3].substr(2), nullptr, 16); //0x
+                }
+                else labels[tokens[1]] = std::stoul(tokens[3], nullptr, 10); //decimal
+            }
+            catch (...){
+                std::cout << "Invalid constant at line - " << lineNr << " - " << line << "\n";
+            }
+        }
         else if (tokens[0] == "]next_page]"){
             page_++;
             pc_ = 0;
@@ -56,7 +68,6 @@ void init_rom(){
     page_ = 0;
     while(std::getline(content, line)){ //rest
         lineNr++;
-        bool page_swap = 0;
         if (line.empty()) continue; //skip rest if empty
         auto pos = line.find(";");
         if (pos != std::string::npos) line = line.substr(0, pos); //delete comments
@@ -66,6 +77,12 @@ void init_rom(){
         std::string token;
         while (lineContent >> token) if (token.back() != ':')tokens.push_back(token); //convert line to tokens
         if (tokens.empty()) continue; //skip rest if empty after deleting comments
+        if (tokens[0] == "]next_page]"){
+            page_++;
+            pc_ = 0;
+            continue;;
+        }
+        if (tokens[0] == "$") continue; //skip rest if const definition
         std::cout << line << ": ";
 
         for (const std::string& token : tokens){
@@ -79,12 +96,6 @@ void init_rom(){
                 rom[(page_ << 6) | pc_] |= tmp2->second;
                 continue;
             }
-            if (token == "]next_page]"){
-                page_++;
-                pc_ = 0;
-                page_swap = 1;
-                break;
-            }
             try { //try to convert a number
                 if (token.size() > 2 && token[0] == '0'){
                     if (token[1] == 'b') rom[(page_ << 6) | pc_] |= std::stoul(token.substr(2), nullptr, 2); //0b
@@ -96,10 +107,8 @@ void init_rom(){
                 std::cout << "Invalid syntax at line - " << lineNr << " - " << line << "\n";
             }
         }
-        if (!page_swap){
-            std::cout << "pc = " << pc_ << ", page = " << page_ << ", " << rom[(page_ << 6) | pc_] << "\n";
-            getLine[(page_ << 6) | pc_] = lineNr - 1;
-            pc_++;
-        }
+        std::cout << "pc = " << pc_ << ", page = " << page_ << ", " << rom[(page_ << 6) | pc_] << "\n";
+        getLine[(page_ << 6) | pc_] = lineNr - 1;
+        pc_++;
     }
 }

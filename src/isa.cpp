@@ -161,6 +161,7 @@ void exec_instr(uint32_t instruction){
                 break;
             case 8: //RSH
                 tmp = reg[x] >> 1;
+                if (reg[x] != tmp << 1) tmp |= 0x100;
                 update_flags(tmp);
                 reg[x] = tmp & BIT_LIMIT;
                 break;
@@ -208,6 +209,8 @@ void exec_instr(uint32_t instruction){
                 cSp--;
                 pc = cStack[cSp] - 1;
                 page = cStack_page[cSp];
+                cStack[cSp] = 0;
+                cStack_page[cSp] = 0;
                 break;
             case 19: //IN
                 //request_input();
@@ -250,22 +253,22 @@ void exec_instr(uint32_t instruction){
             case 27: //ADDC
                 tmp = acc + reg[x] + flag[6];
                 update_flags(tmp);
-                acc = tmp;
+                acc = tmp & BIT_LIMIT;
                 break;
             case 28: //SUBC
                 tmp = acc + (~reg[x]&BIT_LIMIT) + flag[6];
                 update_flags(tmp);
-                acc = tmp;
+                acc = tmp & BIT_LIMIT;
                 break;
             case 29: //NEG
                 tmp = (~reg[x]&BIT_LIMIT) + 1;
                 update_flags(tmp);
-                reg[x] = tmp;
+                reg[x] = tmp & BIT_LIMIT;
                 break;
             case 30: //NEGA
                 tmp = (~acc&BIT_LIMIT) + 1;
                 update_flags(tmp);
-                acc = tmp;
+                acc = tmp & BIT_LIMIT;
                 break;
             case 31: //HALT
                 isPaused = true;
@@ -283,17 +286,17 @@ void exec_instr(uint32_t instruction){
             acc = instruction & BIT_LIMIT;
             break;
         case 16: //SWP
-            if (immediates == 2) SWPtmp = instruction & 0b111111;
+            if (immediates == 2) SWPtmp = instruction;
             else {
-                pc = SWPtmp - 1;
-                page = instruction;
+                page = SWPtmp;
+                pc = (instruction & 0b111111) - 1;
             }
             break;
         case 17: //CALL
-            if (immediates == 2) SWPtmp = instruction & 0b111111;
+            if (immediates == 2) SWPtmp = instruction;
             else {
-                pc = SWPtmp - 1;
-                page = instruction;
+                page = SWPtmp;
+                pc = (instruction & 0b111111) - 1;
             }
             break;
         case 21: //BRC

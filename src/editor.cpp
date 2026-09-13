@@ -39,7 +39,7 @@ TextEditor::LanguageDefinition DeafultAssemblerLang() {
         "RST",
         "AST",
         "ADD",
-        "BSUB,"
+        "BSUB",
         "SUB",
         "CMP",
         "INC",
@@ -102,10 +102,10 @@ TextEditor::LanguageDefinition DeafultAssemblerLang() {
 }
 
 void highlight_line(){
-    if (followHighlights) editor.SetCursorPosition(TextEditor::Coordinates{getLine[pc], 0});
+    if (followHighlights) editor.SetCursorPosition(TextEditor::Coordinates{getLine[(page << 6) | pc], 0});
     editor.SetSelection(
-        TextEditor::Coordinates{getLine[pc], 0},
-        TextEditor::Coordinates{getLine[pc], INT_MAX}
+        TextEditor::Coordinates{getLine[(page << 6) | pc], 0},
+        TextEditor::Coordinates{getLine[(page << 6) | pc], INT_MAX}
     );
 }
 
