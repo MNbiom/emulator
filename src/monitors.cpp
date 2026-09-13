@@ -5,6 +5,8 @@
 #include "display.h"
 #include "isa.h"
 
+#include "imgui_helpers.h"
+
 int ips = 0;
 int changedValue = INT_MAX;
 
@@ -34,6 +36,13 @@ bool resetCStackSize = true;
 bool showOutWindow = true;
 bool resetOutPos = true;
 bool resetOutSize = true;
+
+
+
+bool showCPUSettings = false;
+bool flagSetting = false; // 0 - LSB, 1 - MSB
+
+
 
 void get_change(){
     bool change = false;
@@ -334,4 +343,26 @@ void do_out(){
 }
 
 
-//ImVec2 posTest = ImGui::GetWindowPos();
+void do_cpu_settings(){
+    ImGui::SetNextWindowSize(ImVec2(0, 0));
+    ImGui::Begin(
+        "CPU settings",
+        &showCPUSettings
+    );
+
+    const char* outputs[] = {"LSB", "MSB"};
+    if (ImGui::BeginCombo("LSB/MSB flag", outputs[flagSetting], ImGuiComboFlags_WidthFitPreview)){
+        for (int i = 0; i < IM_ARRAYSIZE(outputs); i++){
+            bool selected = (flagSetting == i);
+            if (ImGui::Selectable(outputs[i], selected))
+                flagSetting = i; // 0 - LSB, 1 - MSB
+            if (selected)
+                ImGui::SetItemDefaultFocus();
+        }
+        ImGui::EndCombo();
+    }
+    ImGui::SameLine();
+    HelpMarker("Pick whether you want to have LSB or MSB flag");
+
+    ImGui::End();
+}

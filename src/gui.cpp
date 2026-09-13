@@ -161,9 +161,8 @@ void do_menu(){
 		}
         
         if (ImGui::BeginMenu("Settings")){
-            if (ImGui::MenuItem("Display settings")){
-                showDisplaySettings = true;
-            }
+            if (ImGui::MenuItem("Display settings")) showDisplaySettings = true;
+            if (ImGui::MenuItem("CPU settings")) showCPUSettings = true;
         ImGui::EndMenu();
         }
 
@@ -174,6 +173,7 @@ void do_menu(){
 void gui(){
     do_menu();
     do_file_dialog();
+    if (showCPUSettings) do_cpu_settings();
     if (showDisplaySettings) do_display_settings();
     if (showDisplayWindow) do_display();
     if (showEditorWindow) do_editor();

@@ -29,6 +29,9 @@ extern bool showOutWindow;
 extern bool resetOutPos;
 extern bool resetOutSize;
 
+extern bool showCPUSettings;
+extern bool flagSetting;
+
 void get_change();
 
 void do_ips();
@@ -44,3 +47,5 @@ void do_dstack();
 void do_cstack();
 
 void do_out();
+
+void do_cpu_settings();

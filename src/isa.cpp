@@ -6,6 +6,7 @@
 
 #include "editor.h"
 #include "display.h"
+#include "monitors.h"
 
 ////////////////////////////////////////////////////////////////
 
@@ -112,7 +113,8 @@ void update_flags(uint32_t aluOut){
     flag[4] = (aluOut < (BIT_LIMIT + 1)) || (aluOut & BIT_LIMIT); //LEQ
     flag[5] = (aluOut >= (BIT_LIMIT + 1)) && ((aluOut & BIT_LIMIT) != 0); //GT
     flag[6] = (aluOut >= (BIT_LIMIT + 1)); //GEQ, CARRY
-    flag[7] = (aluOut & 1) == 1; //MSB/LSB    curent setting = LSB
+    if (flagSetting) flag[7] = (aluOut & 128) == 128; //MSB
+    else flag[7] = (aluOut & 1) == 1;
 }
 
 void exec_instr(uint32_t instruction){
