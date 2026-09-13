@@ -7,6 +7,7 @@ extern bool resetDisplayPos;
 extern bool resetDisplaySize;
 extern const uint16_t DISPLAY_MAX_SIZE;
 extern int screenSizePower;
+extern bool disableBuffer;
 
 extern bool showDisplaySettings;
 extern uint8_t OutX;

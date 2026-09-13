@@ -217,7 +217,10 @@ void exec_instr(uint32_t instruction){
                 break;
             case 20: //OUT
                 out[x] = acc;
-                if (x == OutY) draw_pixel(out[OutX], out[OutY]);
+                if (x == OutY){
+                    draw_pixel(out[OutX], out[OutY]);
+                    if (disableBuffer) update_display();
+                }
                 if (x == OutControl){
                     if (out[OutControl]&0b10) {
                         clear_display();

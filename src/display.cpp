@@ -12,6 +12,7 @@ bool resetDisplayPos = true;
 bool resetDisplaySize = false;
 const uint16_t DISPLAY_MAX_SIZE = 256;
 int screenSizePower = 6;
+bool disableBuffer = false;
 
 bool showDisplaySettings = false;
 uint8_t OutX = 5;
@@ -149,6 +150,8 @@ void do_display(){
     ImGui::SameLine();
     ImGui::PopItemFlag();
     ImGui::Text("%ix%i px", 1<<screenSizePower, 1<<screenSizePower);
+    ImGui::SameLine();
+    ImGui::Checkbox("Disable buffer", &disableBuffer);
 
     ImGui::Image(
         (ImTextureID)(uintptr_t)displayTexture.id,
