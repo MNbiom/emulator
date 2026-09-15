@@ -1,0 +1,13 @@
+pacman -S --needed base-devel mingw-w64-ucrt-x86_64-toolchain
+pacman -S --needed mingw-w64-ucrt-x86_64-cmake mingw-w64-ucrt-x86_64-ninja
+pacman -Syu
+pacman -Su
+
+"MSYS2 UCRT64": {
+            "path": "C:\\msys64\\usr\\bin\\bash.exe",
+            "args": ["-l"],
+            "env": {
+                "MSYSTEM": "UCRT64",
+                "CHERE_INVOKING": "1"
+            }
+        }
