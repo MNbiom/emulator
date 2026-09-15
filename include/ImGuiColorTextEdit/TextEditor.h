@@ -10,6 +10,8 @@
 #include <regex>
 #include "imgui.h"
 
+#include <cstdint>
+
 class TextEditor
 {
 public:
