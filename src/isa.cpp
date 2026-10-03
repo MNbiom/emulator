@@ -311,5 +311,5 @@ void exec_instr(uint32_t instruction){
         }
         immediates -= 1;
     }
-    pc = (pc + 1) & ((1 << ROM_ADDRESS_SIZE) - 1);
+    pc = (pc + 1) & ((1 << PC_WIDTH) - 1);
 }

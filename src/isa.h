@@ -17,6 +17,7 @@ constexpr uint8_t SP_ADDRESS_SIZE = 3;
 constexpr uint8_t CSP_ADDRESS_SIZE = 3;
 constexpr uint8_t RAM_ADDRESS_SIZE = 8;
 
+constexpr uint8_t PC_WIDTH = 6;
 constexpr uint8_t ROM_ADDRESS_SIZE = 14;
 constexpr uint8_t OPCODE_BIT_SIZE = 5;
 constexpr uint8_t OPCODE_SHIFT = 3;
