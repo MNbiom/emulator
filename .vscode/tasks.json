@@ -1,35 +1,11 @@
 {
     "version": "2.0.0",
     "tasks": [
-		{
-            "label": "cmake ..",
-            "type": "shell",
-            "options": {
-                "cwd": "${fileDirname}/../build",
-                "shell": {
-                    "executable": "C:\\msys64\\usr\\bin\\bash.exe",
-                    "args": [
-                        "-l",
-                        "-c"
-                    ]
-                },
-                "env": {
-                    "MSYSTEM": "UCRT64",
-                    "CHERE_INVOKING": "1"
-                }
-            },
-            "command": "cmake ..",
-            "group": {
-                "kind": "build",
-                "isDefault": false
-            },
-            "problemMatcher": []
-        },
         {
             "label": "cmake build debug",
             "type": "shell",
             "options": {
-                "cwd": "${fileDirname}/../build",
+                "cwd": "build",
                 "shell": {
                     "executable": "C:\\msys64\\usr\\bin\\bash.exe",
                     "args": [
@@ -53,7 +29,7 @@
             "label": "cmake build release",
             "type": "shell",
             "options": {
-                "cwd": "${fileDirname}/../build",
+                "cwd": "build",
                 "shell": {
                     "executable": "C:\\msys64\\usr\\bin\\bash.exe",
                     "args": [
